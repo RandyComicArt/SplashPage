@@ -98,12 +98,14 @@ Guides are plain JavaScript objects, so no code changes are needed.
 
 ## Deploying to GitHub Pages
 
-Nothing is deployed automatically, and this repository contains no deploy workflow. The project is prepared for it:
+The site is published by `.github/workflows/deploy.yml`, which lints, validates the data, builds, and deploys `dist/` on every push to `main`. In the repository settings, **Pages → Source** must be set to **GitHub Actions**. The live site is at https://randycomicart.github.io/SplashPage/.
+
+How the project is set up for Pages:
 
 - `vite.config.js` sets `base` to `/SplashPage/` for production builds (and `/` for `npm run dev`). If the repository is renamed, update that value.
 - The app uses **hash routing** (URLs look like `/SplashPage/#/guides/...`) because GitHub Pages can't redirect unknown paths back to a single-page app, and a normal route would 404 on refresh.
 
-To publish, run `npm run build` and serve the `dist/` folder from Pages, either through a GitHub Actions workflow or by pushing `dist/` to a `gh-pages` branch. Check the result with `npm run preview` first.
+To check a production build locally before pushing, run `npm run build` and then `npm run preview`.
 
 ## Status
 
