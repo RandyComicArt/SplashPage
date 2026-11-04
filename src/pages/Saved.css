@@ -1,0 +1,19 @@
+.saved__header {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.saved__section + .saved__section {
+  margin-top: var(--section-space);
+}
+
+.saved__section > .button {
+  margin-top: 0.5rem;
+}
+
+.saved__guides {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+}

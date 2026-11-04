@@ -1,0 +1,51 @@
+.series-hero {
+  --ht-dir: to bottom left;
+  --ht-opacity: 0.16;
+  padding-block: 1.5rem clamp(2.5rem, 6vw, 4rem);
+  background: var(--ink);
+  color: var(--text-on-dark);
+}
+
+.series-hero .breadcrumb {
+  margin-bottom: 1.5rem;
+}
+
+.series-hero__title {
+  margin-top: 0.25rem;
+}
+
+.series-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.series-hero__facts li + li::before {
+  content: '·';
+  margin-right: 1rem;
+  color: var(--yellow);
+}
+
+.series-hero__description {
+  margin-top: 1.25rem;
+}
+
+.series-body__heading {
+  margin-bottom: 1.5rem;
+  font-size: 1.9rem;
+}
+
+.series-body__heading span {
+  margin-left: 0.4rem;
+  color: var(--red);
+}
+
+.series-characters {
+  margin-top: 3.5rem;
+}
+
+.series-characters .series-body__heading {
+  font-size: 1.7rem;
+}

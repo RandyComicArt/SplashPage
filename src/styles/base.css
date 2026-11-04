@@ -1,0 +1,466 @@
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dd,
+figure,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ---------- Accessibility ---------- */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+.on-dark :focus-visible {
+  box-shadow: 0 0 0 3px var(--ink), 0 0 0 6px var(--yellow);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Typography ---------- */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw + 1rem, 5.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw + 1rem, 3.1rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 1vw + 1rem, 1.8rem);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.on-dark .eyebrow {
+  color: var(--yellow);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 0.5vw + 1rem, 1.25rem);
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+.on-dark .lead {
+  color: var(--text-on-dark-muted);
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section--tight {
+  padding-block: calc(var(--section-space) * 0.6);
+}
+
+.section--dark {
+  background: var(--ink);
+  color: var(--text-on-dark);
+}
+
+.section--paper-2 {
+  background: var(--paper-2);
+}
+
+.page {
+  flex: 1;
+}
+
+/* ---------- Buttons and chips ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition:
+    transform 0.15s var(--ease),
+    box-shadow 0.15s var(--ease),
+    background-color 0.15s;
+}
+
+.button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.button--red {
+  background: var(--red);
+  color: var(--white);
+}
+
+.button--ghost {
+  background: var(--white);
+}
+
+.button--small {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.on-dark .button {
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--yellow);
+}
+
+.on-dark .button:hover {
+  box-shadow: 5px 5px 0 var(--yellow);
+}
+
+.on-dark .button--ghost {
+  background: var(--white);
+}
+
+.text-link {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 1px;
+  transition: color 0.15s;
+}
+
+.text-link:hover {
+  color: var(--red);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    transform 0.15s var(--ease);
+}
+
+a.chip:hover,
+button.chip:hover {
+  background: var(--ink);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.chip--static {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag--yellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.tag--red {
+  background: var(--red);
+}
+
+/* Responsive grid of comic cards. */
+.comic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.25rem), 1fr));
+  gap: 1.75rem 1.1rem;
+}
+
+@media (min-width: 700px) {
+  .comic-grid {
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 2.25rem 1.5rem;
+  }
+}
+
+/* ---------- Comic-inspired devices (use sparingly) ---------- */
+
+/* Halftone dots that grow toward one edge. Set --ht-dir to change direction.
+   Add `halftone--light` for light dots on dark backgrounds. */
+.halftone {
+  position: relative;
+  isolation: isolate;
+}
+
+.halftone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* The gradient sets dot size (white = tiny dots, grey = big dots); the dot
+     grid is blended on top and `contrast` snaps it to pure black and white.
+     The mask then fades the dots out toward one corner. */
+  background:
+    linear-gradient(var(--ht-dir, to bottom), #fff 0%, #8c8c8c 100%),
+    radial-gradient(circle at center, #000 0, #fff 60%) 0 0 / var(--ht-size, 10px) var(--ht-size, 10px);
+  background-blend-mode: multiply;
+  filter: contrast(22);
+  mix-blend-mode: multiply;
+  opacity: var(--ht-opacity, 0.18);
+  -webkit-mask-image: linear-gradient(var(--ht-dir, to bottom), transparent 0%, #000 75%);
+  mask-image: linear-gradient(var(--ht-dir, to bottom), transparent 0%, #000 75%);
+}
+
+.halftone--light::before {
+  filter: contrast(22) invert(1);
+  mix-blend-mode: screen;
+  opacity: var(--ht-opacity, 0.22);
+}
+
+/* Panel: thick ink border with an offset shadow, like a comic panel. */
+.panel {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  box-shadow: var(--shadow-panel);
+}
+
+/* Speech bubble with a tail. Direction of the tail: add bubble--tail-left. */
+.bubble {
+  position: relative;
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border: 2.5px solid var(--ink);
+  border-radius: 18px;
+  background: var(--white);
+  color: var(--blue-deep);
+  font-family: var(--font-letter);
+  font-size: 1.15rem;
+  line-height: 1.25;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: 28px;
+  width: 22px;
+  height: 22px;
+  background: var(--white);
+  border-right: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+  transform: skewX(-28deg) rotate(35deg);
+}
+
+.bubble--tail-left::after {
+  right: auto;
+  left: 28px;
+  transform: skewX(28deg) rotate(55deg);
+  border-right: none;
+  border-bottom: 2.5px solid var(--ink);
+  border-left: 2.5px solid var(--ink);
+}
+
+a.bubble {
+  transition: transform 0.15s var(--ease);
+}
+
+a.bubble:hover {
+  transform: translateY(-2px) rotate(-1deg);
+}
+
+/* ---------- Breadcrumb (detail pages) ---------- */
+.breadcrumb {
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+
+.breadcrumb li + li::before {
+  content: '/';
+  margin-right: 0.5rem;
+  color: var(--text-on-dark-muted);
+}
+
+.breadcrumb a {
+  color: var(--text-on-dark-muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current='page'] {
+  color: var(--white);
+  font-weight: 600;
+}
+

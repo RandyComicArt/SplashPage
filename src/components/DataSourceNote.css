@@ -1,0 +1,19 @@
+.data-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  max-width: 70ch;
+  padding: 0.7rem 0.9rem;
+  border-left: 4px solid var(--blue);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: rgba(61, 76, 242, 0.08);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.data-note svg {
+  flex: none;
+  margin-top: 0.12rem;
+  color: var(--blue-deep);
+}

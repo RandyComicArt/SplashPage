@@ -1,0 +1,73 @@
+.guides-hero {
+  --ht-dir: to bottom right;
+  --ht-opacity: 0.18;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  background: var(--ink);
+  color: var(--text-on-dark);
+}
+
+.guides-hero h1 {
+  margin-block: 0.25rem 1rem;
+}
+
+.guides-list {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.guides-list > :first-child {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+  .guides-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .guides-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.guides-how__title {
+  margin-bottom: 2rem;
+}
+
+.guides-how {
+  display: grid;
+  gap: 2rem;
+}
+
+.guides-how__item {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.guides-how__number {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-4deg);
+}
+
+.guides-how__item p {
+  max-width: 36ch;
+  color: var(--text-muted);
+}
+
+@media (min-width: 800px) {
+  .guides-how {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+  }
+}

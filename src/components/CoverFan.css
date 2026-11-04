@@ -1,0 +1,40 @@
+.cover-fan {
+  /* --fan-width: width of one cover. --fan-spread: horizontal step between covers. */
+  --fan-width: 34%;
+  --fan-spread: 21%;
+  --fan-angle: 7deg;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.82;
+}
+
+.cover-fan__item {
+  --offset: calc(var(--index) - (var(--count) - 1) / 2);
+  position: absolute;
+  bottom: 4%;
+  left: calc(50% - var(--fan-width) / 2 + var(--offset) * var(--fan-spread));
+  width: var(--fan-width);
+  border-radius: 4px;
+  box-shadow: 0 16px 28px -10px rgba(0, 0, 0, 0.6);
+  transform: rotate(calc(var(--offset) * var(--fan-angle)));
+  transform-origin: 50% 100%;
+  transition: transform 0.35s var(--ease);
+}
+
+/* Center covers sit on top. */
+.cover-fan__item:nth-child(2),
+.cover-fan__item:nth-child(3) {
+  z-index: 2;
+}
+
+.cover-fan__item:nth-child(2) {
+  bottom: 7%;
+}
+
+.cover-fan__item:nth-child(3) {
+  bottom: 7%;
+}
+
+.cover-fan__item .cover {
+  border: 2px solid var(--ink);
+}

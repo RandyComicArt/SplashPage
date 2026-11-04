@@ -1,0 +1,82 @@
+.filter-panel {
+  display: none;
+  padding: 1.25rem;
+}
+
+.filter-panel.is-open {
+  display: grid;
+  gap: 1rem;
+}
+
+.filter-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-panel__title {
+  font-size: 1.6rem;
+}
+
+.filter-panel__clear {
+  padding: 0.2rem 0;
+  border: 0;
+  background: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--red);
+}
+
+.filter-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.filter-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.filter-field select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+}
+
+.filter-field--check {
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: var(--paper-2);
+}
+
+.filter-field--check label {
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.filter-field--check input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--red);
+}
+
+@media (min-width: 1000px) {
+  .filter-panel {
+    display: grid;
+    gap: 1rem;
+  }
+}

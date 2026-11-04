@@ -1,0 +1,68 @@
+.state-view {
+  width: 100%;
+}
+
+.state-view--message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.state-view__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.state-view__text {
+  max-width: 44ch;
+  color: var(--text-muted);
+}
+
+.state-view__spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 3rem auto;
+  border: 4px solid var(--line);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skeleton {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e9e2d3 25%, #f4eee1 50%, #e9e2d3 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-card__cover {
+  aspect-ratio: 2 / 3;
+}
+
+.skeleton-card__line {
+  height: 0.9rem;
+  margin-top: 0.7rem;
+}
+
+.skeleton-card__line--short {
+  width: 55%;
+}

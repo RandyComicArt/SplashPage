@@ -1,0 +1,73 @@
+.carousel {
+  position: relative;
+}
+
+.carousel__track {
+  display: flex;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  /* Padding gives hover lift and shadows room; negative margin keeps alignment. */
+  padding: 0.75rem var(--gutter) 1.5rem;
+  margin-inline: calc(var(--gutter) * -1);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: none;
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__item {
+  flex: 0 0 clamp(9rem, 38vw, 12.5rem);
+  scroll-snap-align: start;
+}
+
+@media (min-width: 900px) {
+  .carousel__item {
+    flex-basis: 12.75rem;
+  }
+}
+
+.carousel__button {
+  position: absolute;
+  top: 38%;
+  z-index: 3;
+  display: none;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: translateY(-50%);
+  transition:
+    opacity 0.15s,
+    transform 0.15s var(--ease);
+}
+
+.carousel__button:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel__button:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel__button--prev {
+  left: -1.25rem;
+}
+
+.carousel__button--next {
+  right: -1.25rem;
+}
+
+@media (hover: hover) and (min-width: 900px) {
+  .carousel__button {
+    display: grid;
+  }
+}

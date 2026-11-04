@@ -1,0 +1,251 @@
+/* ---------- Hero ---------- */
+.hero {
+  --ht-dir: to bottom left;
+  --ht-size: 12px;
+  --ht-opacity: 0.2;
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(4rem, 8vw, 7rem);
+  background: var(--ink);
+  color: var(--text-on-dark);
+  overflow-x: clip; /* the tilted cover fan can poke past the edge on small screens */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - clamp(1.5rem, 3vw, 3rem)), 0 100%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero__text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  justify-items: start;
+}
+
+.hero__title {
+  font-size: clamp(3.4rem, 9vw, 7.2rem);
+  line-height: 0.88;
+}
+
+.hero__highlight {
+  position: relative;
+  display: inline-block;
+  padding-inline: 0.12em;
+  color: var(--ink);
+  z-index: 0;
+}
+
+.hero__highlight::before {
+  content: '';
+  position: absolute;
+  inset: 0.06em -0.04em 0.02em;
+  z-index: -1;
+  background: var(--yellow);
+  transform: skewX(-8deg) rotate(-1.5deg);
+}
+
+.hero__search {
+  width: min(100%, 36rem);
+  margin-top: 0.5rem;
+}
+
+.hero__shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.hero__art {
+  position: relative;
+  width: min(100%, 34rem);
+  margin-inline: auto;
+}
+
+.hero__fan {
+  --fan-width: 36%;
+  --fan-spread: 21%;
+  --fan-angle: 6deg;
+  transform: scale(1.02);
+}
+
+.hero__fan .cover-fan__item {
+  box-shadow: 0 22px 34px -10px rgba(0, 0, 0, 0.75);
+}
+
+.hero__bubble {
+  position: absolute;
+  z-index: 5;
+  top: -0.5rem;
+  left: 0;
+  max-width: 13rem;
+  font-size: clamp(1rem, 1.2vw + 0.6rem, 1.3rem);
+  transform: rotate(-3deg);
+}
+
+@media (min-width: 960px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 3rem;
+  }
+
+  .hero__bubble {
+    top: 1rem;
+    left: -1.5rem;
+  }
+}
+
+/* ---------- Guides ---------- */
+.guide-grid {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.guide-grid > :first-child {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .guide-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Characters ---------- */
+.character-grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .character-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .character-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Dark carousel section ---------- */
+.section--dark .comic-card__meta {
+  color: var(--text-on-dark-muted);
+}
+
+.section--dark .comic-card__link:hover .comic-card__title {
+  color: var(--yellow);
+}
+
+.latest-note {
+  margin-bottom: 1rem;
+}
+
+/* ---------- Publishers and genres ---------- */
+.browse {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+.browse__publishers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.publisher-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 7.5rem;
+  height: 100%;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    background-color 0.2s;
+}
+
+.publisher-tile:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--ink);
+  background: var(--yellow);
+}
+
+.publisher-tile__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 6vw, 1.9rem);
+  line-height: 1;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.publisher-tile__count {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.publisher-tile:hover .publisher-tile__count {
+  color: var(--ink);
+}
+
+.browse__genres-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.browse__count {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+a.chip:hover .browse__count {
+  color: var(--text-on-dark-muted);
+}
+
+@media (min-width: 960px) {
+  .browse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+/* ---------- Closing call to action ---------- */
+.cta {
+  --ht-dir: to right;
+  --ht-opacity: 0.18;
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+}
+
+.cta__inner {
+  display: grid;
+  gap: 1.75rem;
+  justify-items: center;
+}
+
+.cta__title {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  text-shadow: 3px 3px 0 var(--ink);
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

@@ -1,0 +1,108 @@
+.character-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  box-shadow: var(--shadow-panel);
+  transition:
+    transform 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+
+.character-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.character-card__covers {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem 1rem 0;
+  height: 10.5rem;
+  overflow: hidden;
+  background: var(--accent);
+  border-bottom: 2px solid var(--ink);
+}
+
+.character-card__cover {
+  flex: 0 0 5.6rem;
+  align-self: flex-end;
+  transform: translateY(0.9rem) rotate(var(--tilt, 0deg));
+  transition: transform 0.25s var(--ease);
+}
+
+.character-card__cover:nth-child(1) {
+  --tilt: -5deg;
+}
+
+.character-card__cover:nth-child(2) {
+  --tilt: 0deg;
+  transform: translateY(0.2rem);
+}
+
+.character-card__cover:nth-child(3) {
+  --tilt: 5deg;
+}
+
+.character-card:hover .character-card__cover {
+  transform: translateY(0) rotate(var(--tilt, 0deg));
+}
+
+.character-card__cover .cover {
+  border: 2px solid var(--ink);
+}
+
+.character-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.character-card__publisher {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.character-card__name {
+  font-size: 2.1rem;
+}
+
+/* The whole card is clickable through this link. */
+.character-card__main-link {
+  text-decoration: none;
+}
+
+.character-card__main-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.character-card__blurb {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.character-card__count {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.character-card__guide-link {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}

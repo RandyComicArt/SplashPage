@@ -1,0 +1,81 @@
+.comic-card {
+  position: relative;
+  min-width: 0;
+}
+
+.comic-card__link {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.comic-card__cover {
+  position: relative;
+  border-radius: 4px;
+  box-shadow: var(--shadow-cover);
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease);
+}
+
+.comic-card__link:hover .comic-card__cover,
+.comic-card__link:focus-visible .comic-card__cover {
+  transform: translateY(-6px) rotate(-1.2deg);
+  box-shadow: 0 26px 40px -18px rgba(14, 14, 18, 0.6), 0 2px 6px rgba(14, 14, 18, 0.2);
+}
+
+.comic-card__badges {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.comic-card__title {
+  margin-top: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.comic-card__link:hover .comic-card__title {
+  color: var(--red);
+}
+
+.comic-card__meta {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.comic-card__save {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+/* Visible on hover/focus for pointer users; always available to touch and keyboard users. */
+.comic-card:hover .comic-card__save,
+.comic-card:focus-within .comic-card__save,
+.comic-card__save:has(.is-saved) {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .comic-card__save {
+    opacity: 1;
+  }
+}
