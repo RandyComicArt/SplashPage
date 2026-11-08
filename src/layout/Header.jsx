@@ -9,6 +9,7 @@ import './Header.css'
 const navItems = [
   { to: '/', label: 'Home', end: true },
   { to: '/discover', label: 'Discover' },
+  { to: '/releases', label: 'New Releases' },
   { to: '/guides', label: 'Beginner Guides' },
 ]
 

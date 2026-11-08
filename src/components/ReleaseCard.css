@@ -1,0 +1,39 @@
+.release-card {
+  min-width: 0;
+}
+
+.release-card__cover {
+  border-radius: 4px;
+  box-shadow: var(--shadow-cover);
+}
+
+.release-card__title {
+  margin-top: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.release-card__meta {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.release-card__date {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.section--dark .release-card__date {
+  color: var(--yellow);
+}

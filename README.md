@@ -15,7 +15,8 @@ SplashPage focuses on the first step: *which book should I read, and why that on
 | Area | What it does |
 | --- | --- |
 | **Beginner Guides** | Hand-written reading guides. Each recommends a starting point, explains **why** every book is on the list, and offers alternate paths (for example *Just the Essentials*, *Classic*, *Modern*). The chosen path is stored in the URL (`?path=modern`), so it can be linked. |
-| **Home** | Hero and search, featured guides, beginner-friendly picks, explore by character, featured comics, publishers and genres. |
+| **New Releases** | Real weekly releases from [Metron](https://metron.cloud): this week, upcoming weeks and last week, with a publisher filter. Refreshed every Wednesday by the deploy workflow. Metron data is credited on the page and in the footer. |
+| **Home** | Hero and search, featured guides, beginner-friendly picks, explore by character, featured comics, publishers and genres. The "New Releases" row uses the synced release data. |
 | **Discover** | Search plus filters for character, creator, publisher, genre and decade. Browse comics, series, creators or characters. Filters live in the URL, so any search can be shared or bookmarked. |
 | **Comic and series pages** | Cover, credits, description, characters and related guides. Any field that isn't known is simply left out. Nothing is made up to fill a gap. |
 | **Saved** (local only) | Save comics and guides, and see recently viewed. Stored in your browser's `localStorage`. There are **no accounts**. |
@@ -28,16 +29,38 @@ No accounts or login, profiles, comments or forums, social feeds, subscriptions,
 
 ## Where the comic data comes from
 
-**The catalog is a small local dataset, not a live feed.** The app says so wherever it matters (for example "Recently Published" instead of "New Releases", plus a note on Discover).
+There are two sources, and the app labels each honestly.
+
+### New releases: synced weekly from Metron
+
+`scripts/sync-releases.mjs` calls the [Metron](https://metron.cloud) API for recent and upcoming issues by store date (DC, Marvel, Image, Dark Horse, BOOM! and IDW), and writes `public/data/releases.json`. The site loads that file at runtime.
+
+- **The API token never reaches the site.** It lives in the `METRON_TOKEN` repository secret and is read by the sync script in GitHub Actions. Only the resulting JSON is published.
+- The generated file is git-ignored. It is built fresh on every deploy.
+- Metron's limits are 20 requests per minute and 5,000 per day. The script spaces out requests and honors `Retry-After`.
+- Metron's data is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), so the site credits it wherever release data appears.
+- If no synced data exists (for example local development before a sync), Home falls back to the catalog's "Recently Published" row and `/releases` shows an "isn't available" message. Nothing is invented to fill the gap.
+- Release cards are not links, because release data has no detail page on SplashPage.
+
+To try it locally, create a token on your Metron account page, then:
+
+```bash
+METRON_TOKEN=your-token npm run sync:releases
+npm run dev
+```
+
+### Comics catalog: local starter dataset, not a live feed
+
+The app says so wherever it matters (for example a note on Discover).
 
 - `src/data/catalog/`: 39 well-known collected editions and 37 series, written by hand. Optional fields (creators, "collects" ranges) are included only when known.
 - Cover images are loaded from [Open Library](https://openlibrary.org/dev/docs/api/covers) (`covers.openlibrary.org`). They are hotlinked, not stored in this repo. Open Library is a public service, so covers may occasionally be slow or missing. The UI falls back to a placeholder.
 
-### Why not a live comics API?
+### Why a sync script instead of calling an API from the browser?
 
-The usual comic APIs need an API key or authentication. A static site on GitHub Pages has no server, so any key placed in the code would be public to every visitor. Rather than ship an insecure or invented integration, SplashPage uses the local dataset. A live source would need a small server-side proxy to hold the key, which is out of scope for a static app.
+Comic APIs need an API key or authentication. A static site on GitHub Pages has no server, so any key placed in the code would be public to every visitor. Fetching at build time in CI keeps the key private while the site stays static. The trade-off is freshness: data is as new as the last weekly sync, and the page says when that was.
 
-### Swapping in a real provider later
+### Swapping in a real provider for the catalog later
 
 All comic data flows through `src/services/index.js`, which re-exports `localProvider.js`. Pages never read the data files directly. A live provider only needs to export the same functions (`searchComics`, `getComic`, `getSeries`, `getFacets`, …) and `providerInfo` with `isLive: true`. Then change one line in `services/index.js`. The UI labels adapt automatically.
 
@@ -67,6 +90,7 @@ npm run build        # production build into dist/
 npm run preview      # serve the production build locally
 npm run lint         # oxlint
 npm run check:data   # validate catalog and guide data (see below)
+npm run sync:releases  # fetch new releases from Metron (needs METRON_TOKEN)
 ```
 
 ## Project structure
@@ -74,7 +98,7 @@ npm run check:data   # validate catalog and guide data (see below)
 ```
 src/
   data/
-    catalog/      local comics and series (the dev dataset)
+    catalog/      local comics and series (the starter dataset)
     guides/       one file per Beginner Guide, plus index.js (the registry)
     characters.js featured characters on the home page
   services/       data access: the only place pages get comic data from
@@ -84,7 +108,8 @@ src/
   pages/          one component per route
   styles/         tokens and global CSS
 scripts/
-  validate-data.mjs
+  validate-data.mjs     checks catalog and guide data
+  sync-releases.mjs     fetches new releases from Metron
 ```
 
 ## Adding a Beginner Guide
@@ -98,7 +123,17 @@ Guides are plain JavaScript objects, so no code changes are needed.
 
 ## Deploying to GitHub Pages
 
-The site is published by `.github/workflows/deploy.yml`, which lints, validates the data, builds, and deploys `dist/` on every push to `main`. In the repository settings, **Pages → Source** must be set to **GitHub Actions**. The live site is at https://randycomicart.github.io/SplashPage/.
+The site is published by `.github/workflows/deploy.yml`, which lints, validates the data, syncs releases, builds, and deploys `dist/`. It runs:
+
+- on every push to `main`
+- every **Wednesday at 15:00 UTC** (8am Pacific), which refreshes the release data with no action from you
+- on demand from the Actions tab
+
+In the repository settings, **Pages → Source** must be set to **GitHub Actions**, and a **`METRON_TOKEN`** secret must exist (Settings → Secrets and variables → Actions). The live site is at https://randycomicart.github.io/SplashPage/.
+
+If the Wednesday sync fails, the deploy stops and the previous site stays up. On a normal push, a failed sync doesn't block the deploy; the site just goes out without fresh release data.
+
+GitHub pauses scheduled workflows in public repositories after 60 days without activity. To prevent that, each weekly run also re-enables the workflow through GitHub's API (the `keepalive` job), which resets the timer. If the schedule ever does stop, open the Actions tab and re-enable the workflow.
 
 How the project is set up for Pages:
 
@@ -115,8 +150,9 @@ Working and usable, with a deliberately small catalog. Five Beginner Guides are 
 
 Not built yet. These are ideas, not promises.
 
-- A live data provider behind a small server-side proxy (so no key ever ships to the browser)
-- More guides and a larger catalog
+- A larger catalog synced from Metron (series and collected editions, fetched incrementally to respect rate limits)
+- Release detail pages
+- More guides
 - Guides for creators and genres, not only characters
 - Reading-order timelines for long-running series
 - "Where to read" links to libraries and publishers' own storefronts (informational only)
@@ -124,4 +160,4 @@ Not built yet. These are ideas, not promises.
 
 ## Credits and notices
 
-Comic titles, characters and artwork are trademarks and copyrights of their respective owners. SplashPage is an independent, non-commercial project and is not affiliated with any publisher. Cover images are provided by Open Library.
+Comic titles, characters and artwork are trademarks and copyrights of their respective owners. SplashPage is an independent, non-commercial project and is not affiliated with any publisher. Catalog cover images are provided by Open Library. New release data and covers come from [Metron](https://metron.cloud) (data licensed CC BY-SA 4.0).

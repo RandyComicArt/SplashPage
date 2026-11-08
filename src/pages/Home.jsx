@@ -6,6 +6,8 @@ import ComicCarousel from '../components/ComicCarousel.jsx'
 import GuideCard from '../components/GuideCard.jsx'
 import CharacterCard from '../components/CharacterCard.jsx'
 import DataSourceNote from '../components/DataSourceNote.jsx'
+import ReleaseCard from '../components/ReleaseCard.jsx'
+import ReleaseSourceNote from '../components/ReleaseSourceNote.jsx'
 import { ErrorState, LoadingState } from '../components/StateViews.jsx'
 import { ArrowRightIcon } from '../components/Icons.jsx'
 import { useAsync } from '../hooks/useAsync.js'
@@ -15,8 +17,8 @@ import {
   getFacets,
   getFeaturedComics,
   getLatestComics,
-  providerInfo,
 } from '../services'
+import { getReleases, weekOffset } from '../services/releases.js'
 import { guides } from '../data/guides/index.js'
 import { featuredCharacters } from '../data/characters.js'
 import './Home.css'
@@ -34,6 +36,14 @@ export default function Home() {
   usePageTitle()
   const navigate = useNavigate()
   const { data, isLoading, isError, reload } = useAsync(loadHomeData, [])
+
+  // Synced weekly release data. When it isn't available (or has nothing on sale
+  // this week) the page falls back to the catalog's "Recently Published" row.
+  const releaseState = useAsync(getReleases, [])
+  const releases = releaseState.data
+  const thisWeek = releases ? releases.items.filter((item) => weekOffset(item.storeDate) === 0) : []
+  const newReleases = [...thisWeek.filter((item) => item.image), ...thisWeek.filter((item) => !item.image)].slice(0, 20)
+  const showReleases = newReleases.length > 0
 
   const handleSearch = (query) => navigate(query ? `/discover?q=${encodeURIComponent(query)}` : '/discover')
 
@@ -152,19 +162,41 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="section" aria-labelledby="latest-heading">
-            <div className="container">
-              <SectionHeader
-                id="latest-heading"
-                eyebrow={providerInfo.isLive ? 'This week' : 'Newest in the catalog'}
-                title={providerInfo.isLive ? 'New Releases' : 'Recently Published'}
-                linkTo="/discover?sort=newest"
-                linkLabel="Sort by newest"
-              />
-              <DataSourceNote className="latest-note" />
-              <ComicCarousel comics={data.latest} label="Recently published comics" />
-            </div>
-          </section>
+          {!releaseState.isLoading && showReleases && (
+            <section className="section" aria-labelledby="latest-heading">
+              <div className="container">
+                <SectionHeader
+                  id="latest-heading"
+                  eyebrow="On sale this week"
+                  title="New Releases"
+                  linkTo="/releases"
+                  linkLabel="All releases"
+                />
+                <ReleaseSourceNote releases={releases} className="latest-note" />
+                <ComicCarousel
+                  comics={newReleases}
+                  label="New releases this week"
+                  renderCard={(release) => <ReleaseCard release={release} />}
+                />
+              </div>
+            </section>
+          )}
+
+          {!releaseState.isLoading && !showReleases && (
+            <section className="section" aria-labelledby="latest-heading">
+              <div className="container">
+                <SectionHeader
+                  id="latest-heading"
+                  eyebrow="Newest in the catalog"
+                  title="Recently Published"
+                  linkTo="/discover?sort=newest"
+                  linkLabel="Sort by newest"
+                />
+                <DataSourceNote className="latest-note" />
+                <ComicCarousel comics={data.latest} label="Recently published comics" />
+              </div>
+            </section>
+          )}
 
           <section className="section section--paper-2" aria-labelledby="browse-heading">
             <div className="container">

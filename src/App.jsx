@@ -6,6 +6,7 @@ import ComicPage from './pages/ComicPage.jsx'
 import SeriesPage from './pages/SeriesPage.jsx'
 import GuidesIndex from './pages/GuidesIndex.jsx'
 import GuidePage from './pages/GuidePage.jsx'
+import Releases from './pages/Releases.jsx'
 import Saved from './pages/Saved.jsx'
 import NotFound from './pages/NotFound.jsx'
 
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="series/:seriesId" element={<SeriesPage />} />
           <Route path="guides" element={<GuidesIndex />} />
           <Route path="guides/:slug" element={<GuidePage />} />
+          <Route path="releases" element={<Releases />} />
           <Route path="saved" element={<Saved />} />
           <Route path="*" element={<NotFound />} />
         </Route>

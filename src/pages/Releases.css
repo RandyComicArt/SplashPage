@@ -1,0 +1,58 @@
+.releases-hero {
+  --ht-dir: to bottom right;
+  --ht-opacity: 0.18;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  background: var(--ink);
+  color: var(--text-on-dark);
+}
+
+.releases-hero h1 {
+  margin-block: 0.25rem 1rem;
+}
+
+.releases {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.releases__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.releases__filters .chip {
+  cursor: pointer;
+}
+
+.releases__filters .chip[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.releases__count {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.releases__filters .chip[aria-pressed='true'] .releases__count {
+  color: var(--text-on-dark-muted);
+}
+
+.releases__week {
+  margin-top: 1.5rem;
+}
+
+.releases__week-title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ink);
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+}
+
+.releases__week-title .releases__count {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  vertical-align: middle;
+}

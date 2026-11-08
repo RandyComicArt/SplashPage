@@ -7,8 +7,11 @@ import './ComicCarousel.css'
  * A horizontally scrolling row of comic cards.
  * Native scrolling (touch, trackpad, keyboard) works everywhere; the arrow
  * buttons are a convenience for mouse users and are disabled at either end.
+ *
+ * Shows ComicCards by default. Pass `renderCard` to show another kind of card
+ * (for example release cards); items only need an `id`.
  */
-export default function ComicCarousel({ comics, label, showBadges = true }) {
+export default function ComicCarousel({ comics, label, showBadges = true, renderCard }) {
   const trackRef = useRef(null)
   const [edges, setEdges] = useState({ atStart: true, atEnd: false })
 
@@ -50,7 +53,7 @@ export default function ComicCarousel({ comics, label, showBadges = true }) {
       <ul className="carousel__track" ref={trackRef} onScroll={updateEdges}>
         {comics.map((comic) => (
           <li className="carousel__item" key={comic.id}>
-            <ComicCard comic={comic} showBadges={showBadges} />
+            {renderCard ? renderCard(comic) : <ComicCard comic={comic} showBadges={showBadges} />}
           </li>
         ))}
       </ul>

@@ -30,6 +30,7 @@
   padding: 0.5rem 0.9rem;
   font-weight: 600;
   font-size: 0.95rem;
+  white-space: nowrap;
   text-decoration: none;
   color: var(--text-on-dark-muted);
   transition: color 0.15s;
@@ -64,11 +65,13 @@
 .site-header__search {
   display: none;
   margin-left: auto;
-  width: min(20rem, 28vw);
+  width: clamp(11rem, 20vw, 20rem);
+  min-width: 0;
 }
 
 .site-header__saved {
   position: relative;
+  flex: none;
   display: grid;
   place-items: center;
   width: 2.5rem;
@@ -139,7 +142,8 @@
   color: var(--yellow);
 }
 
-@media (min-width: 900px) {
+/* Four nav links plus the search box need about this much room. */
+@media (min-width: 1040px) {
   .site-header__nav {
     display: block;
   }

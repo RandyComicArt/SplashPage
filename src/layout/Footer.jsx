@@ -21,6 +21,9 @@ export default function Footer() {
               <Link to="/discover">Discover</Link>
             </li>
             <li>
+              <Link to="/releases">New Releases</Link>
+            </li>
+            <li>
               <Link to="/guides">Beginner Guides</Link>
             </li>
             <li>
@@ -33,6 +36,17 @@ export default function Footer() {
           <p>
             {providerInfo.isLive ? 'Comic data from a live source.' : `${providerInfo.name}: not live data.`}{' '}
             {providerInfo.coverAttribution}
+          </p>
+          <p>
+            New release data from{' '}
+            <a href="https://metron.cloud" target="_blank" rel="noreferrer">
+              Metron
+            </a>
+            , licensed{' '}
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">
+              CC BY-SA 4.0
+            </a>
+            .
           </p>
           <p>
             Saved comics and guides stay in this browser only. Comic titles, characters and artwork are
