@@ -14,7 +14,6 @@ import { useAsync } from '../hooks/useAsync.js'
 import { usePageTitle } from '../hooks/usePageTitle.js'
 import {
   getBeginnerFriendlyComics,
-  getFacets,
   getFeaturedComics,
   getLatestComics,
 } from '../services'
@@ -28,8 +27,7 @@ function loadHomeData() {
     getFeaturedComics(12),
     getBeginnerFriendlyComics(12),
     getLatestComics(12),
-    getFacets(),
-  ]).then(([featured, beginner, latest, facets]) => ({ featured, beginner, latest, facets }))
+  ]).then(([featured, beginner, latest]) => ({ featured, beginner, latest }))
 }
 
 export default function Home() {
@@ -86,7 +84,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="guides-heading">
+      {!releaseState.isLoading && showReleases && (
+        <section className="section" aria-labelledby="latest-heading">
+          <div className="container">
+            <SectionHeader
+              id="latest-heading"
+              eyebrow="On sale this week"
+              title="New Releases"
+              linkTo="/releases"
+              linkLabel="All releases"
+            />
+            <ReleaseSourceNote releases={releases} className="latest-note" />
+            <ComicCarousel
+              comics={newReleases}
+              label="New releases this week"
+              renderCard={(release) => <ReleaseCard release={release} />}
+            />
+          </div>
+        </section>
+      )}
+
+      {data && !releaseState.isLoading && !showReleases && (
+        <section className="section" aria-labelledby="latest-heading">
+          <div className="container">
+            <SectionHeader
+              id="latest-heading"
+              eyebrow="Newest in the catalog"
+              title="Recently Published"
+              linkTo="/discover?sort=newest"
+              linkLabel="Sort by newest"
+            />
+            <DataSourceNote className="latest-note" />
+            <ComicCarousel comics={data.latest} label="Recently published comics" />
+          </div>
+        </section>
+      )}
+
+      <section className="section section--paper-2" aria-labelledby="guides-heading">
         <div className="container">
           <SectionHeader
             id="guides-heading"
@@ -118,7 +152,7 @@ export default function Home() {
 
       {data && (
         <>
-          <section className="section section--paper-2" aria-labelledby="beginner-heading">
+          <section className="section" aria-labelledby="beginner-heading">
             <div className="container">
               <SectionHeader
                 id="beginner-heading"
@@ -132,7 +166,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="section" aria-labelledby="character-heading">
+          <section className="section section--paper-2" aria-labelledby="character-heading">
             <div className="container">
               <SectionHeader
                 id="character-heading"
@@ -159,77 +193,6 @@ export default function Home() {
                 linkLabel="Browse everything"
               />
               <ComicCarousel comics={data.featured} label="Featured comics" showBadges={false} />
-            </div>
-          </section>
-
-          {!releaseState.isLoading && showReleases && (
-            <section className="section" aria-labelledby="latest-heading">
-              <div className="container">
-                <SectionHeader
-                  id="latest-heading"
-                  eyebrow="On sale this week"
-                  title="New Releases"
-                  linkTo="/releases"
-                  linkLabel="All releases"
-                />
-                <ReleaseSourceNote releases={releases} className="latest-note" />
-                <ComicCarousel
-                  comics={newReleases}
-                  label="New releases this week"
-                  renderCard={(release) => <ReleaseCard release={release} />}
-                />
-              </div>
-            </section>
-          )}
-
-          {!releaseState.isLoading && !showReleases && (
-            <section className="section" aria-labelledby="latest-heading">
-              <div className="container">
-                <SectionHeader
-                  id="latest-heading"
-                  eyebrow="Newest in the catalog"
-                  title="Recently Published"
-                  linkTo="/discover?sort=newest"
-                  linkLabel="Sort by newest"
-                />
-                <DataSourceNote className="latest-note" />
-                <ComicCarousel comics={data.latest} label="Recently published comics" />
-              </div>
-            </section>
-          )}
-
-          <section className="section section--paper-2" aria-labelledby="browse-heading">
-            <div className="container">
-              <SectionHeader id="browse-heading" eyebrow="Browse" title="Publishers and Genres" />
-              <div className="browse">
-                <ul className="browse__publishers">
-                  {data.facets.publishers.slice(0, 4).map((publisher) => (
-                    <li key={publisher.name}>
-                      <Link
-                        to={`/discover?publisher=${encodeURIComponent(publisher.name)}`}
-                        className="publisher-tile panel"
-                      >
-                        <span className="publisher-tile__name">{publisher.name}</span>
-                        <span className="publisher-tile__count">
-                          {publisher.count} {publisher.count === 1 ? 'comic' : 'comics'}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <div className="browse__genres">
-                  <h3 className="browse__genres-title">Genres</h3>
-                  <ul className="chip-list">
-                    {data.facets.genres.map((genre) => (
-                      <li key={genre.name}>
-                        <Link to={`/discover?genre=${encodeURIComponent(genre.name)}`} className="chip">
-                          {genre.name} <span className="browse__count">{genre.count}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
             </div>
           </section>
         </>

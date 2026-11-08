@@ -1,19 +1,8 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
   text-decoration: none;
   color: var(--white);
-}
-
-.logo__mark {
-  width: 2.3rem;
-  height: 2.3rem;
-  transition: transform 0.4s var(--ease);
-}
-
-.logo:hover .logo__mark {
-  transform: rotate(18deg) scale(1.06);
 }
 
 .logo__text {
