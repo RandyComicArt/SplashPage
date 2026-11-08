@@ -36,7 +36,7 @@ There are two sources, and the app labels each honestly.
 `scripts/sync-releases.mjs` calls the [Metron](https://metron.cloud) API for recent and upcoming issues by store date (DC, Marvel, Image, Dark Horse, BOOM! and IDW), and writes `public/data/releases.json`. The site loads that file at runtime.
 
 - **The API token never reaches the site.** It lives in the `METRON_TOKEN` repository secret and is read by the sync script in GitHub Actions. Only the resulting JSON is published.
-- The generated file is git-ignored. It is built fresh on every deploy.
+- The generated file is committed to the repo. The weekly workflow refreshes and commits it; ordinary pushes build with the committed copy, so a push never wipes the site's data.
 - Metron's limits are 20 requests per minute and 5,000 per day. The script spaces out requests and honors `Retry-After`.
 - Metron's data is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), so the site credits it wherever release data appears.
 - If no synced data exists (for example local development before a sync), Home falls back to the catalog's "Recently Published" row and `/releases` shows an "isn't available" message. Nothing is invented to fill the gap.
@@ -145,7 +145,7 @@ Guides are plain JavaScript objects, so no code changes are needed.
 
 ## Deploying to GitHub Pages
 
-The site is published by `.github/workflows/deploy.yml`, which lints, syncs the catalog (weekly and manual runs), validates the data, syncs releases, builds, and deploys `dist/`. It runs:
+The site is published by `.github/workflows/deploy.yml`, which lints, refreshes the catalog and releases from Metron (weekly and manual runs only), validates the data, builds, and deploys `dist/`. Refreshed data is committed back to `main` as "Weekly data sync". It runs:
 
 - on every push to `main`
 - every **Wednesday at 15:00 UTC** (8am Pacific), which refreshes the release data and the catalog with no action from you (the catalog update is committed back to `main` as "Weekly catalog sync")
@@ -153,7 +153,7 @@ The site is published by `.github/workflows/deploy.yml`, which lints, syncs the 
 
 In the repository settings, **Pages → Source** must be set to **GitHub Actions**, and a **`METRON_TOKEN`** secret must exist (Settings → Secrets and variables → Actions). The live site is at https://randycomicart.github.io/SplashPage/.
 
-If the Wednesday sync fails, the deploy stops and the previous site stays up. On a normal push, a failed sync doesn't block the deploy; the site just goes out without fresh release data.
+If the Wednesday sync fails, the deploy stops and the previous site stays up. A manual run that fails to sync still deploys, using the data already committed. Ordinary pushes don't call Metron at all.
 
 GitHub pauses scheduled workflows in public repositories after 60 days without activity. To prevent that, each weekly run also re-enables the workflow through GitHub's API (the `keepalive` job), which resets the timer. If the schedule ever does stop, open the Actions tab and re-enable the workflow.
 

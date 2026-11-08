@@ -6,8 +6,13 @@
 // Metron's limits are 20 requests per minute and 5,000 per day. Every request
 // goes through `getJson`, which spaces requests out and honors Retry-After.
 
-const MIN_MS_BETWEEN_REQUESTS = 3200 // stays under 20 requests a minute
-const MAX_RETRIES = 3
+const STARTING_GAP_MS = 3200 // stays under 20 requests a minute
+const MAX_GAP_MS = 20000
+const MAX_RETRIES = 6
+
+// Spacing between requests. It doubles every time Metron says "slow down",
+// so a run that gets rate limited calms itself down instead of hammering the API.
+let gapMs = STARTING_GAP_MS
 
 export const API = 'https://metron.cloud/api'
 
@@ -31,7 +36,7 @@ export async function getJson(url) {
   const token = requireToken()
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const wait = lastRequestAt + MIN_MS_BETWEEN_REQUESTS - Date.now()
+    const wait = lastRequestAt + gapMs - Date.now()
     if (wait > 0) await sleep(wait)
     lastRequestAt = Date.now()
     requestCount++
@@ -45,8 +50,22 @@ export async function getJson(url) {
     })
 
     if (response.status === 429) {
-      const seconds = Number(response.headers.get('Retry-After')) || 60
-      console.warn(`Rate limited by Metron. Waiting ${seconds}s (attempt ${attempt}/${MAX_RETRIES}).`)
+      // Metron's own Retry-After can be very short, so also back off a little more each attempt.
+      const asked = Number(response.headers.get('Retry-After')) || 0
+      const seconds = Math.max(asked, 15 * attempt)
+      gapMs = Math.min(gapMs * 2, MAX_GAP_MS)
+
+      // Say why, so a failed run is easy to diagnose. Rate limit headers and the short
+      // throttle message are safe to print; the request's Authorization header is not included.
+      const limits = [...response.headers]
+        .filter(([name]) => name.toLowerCase().startsWith('x-ratelimit') || name.toLowerCase() === 'retry-after')
+        .map(([name, value]) => `${name}=${value}`)
+        .join(' ')
+      const detail = (await response.text().catch(() => '')).slice(0, 200).replace(/\s+/g, ' ')
+      console.warn(
+        `Rate limited by Metron (attempt ${attempt}/${MAX_RETRIES}). ${limits} ${detail}\n` +
+          `  Waiting ${seconds}s, then spacing requests ${(gapMs / 1000).toFixed(1)}s apart.`,
+      )
       await sleep(seconds * 1000)
       continue
     }

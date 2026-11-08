@@ -17,10 +17,11 @@ permissions:
   pages: write
   id-token: write
 
-# Only one deploy at a time; a newer push replaces one that is still waiting.
+# Only one deploy at a time. A run in progress is never cancelled (the first catalog
+# sync is long); a newer push waits its turn.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   # GitHub switches off scheduled workflows in public repos after 60 days without
@@ -54,10 +55,13 @@ jobs:
       - run: npm ci
       - run: npm run lint
 
-      # Refresh the Discover catalog (weekly and manual runs only; ordinary pushes
-      # just use the catalog file already in the repo). The result is committed back
-      # to main, so the next sync only has to look up covers for new series.
-      # As with releases, a failure stops the weekly deploy but not a manual one.
+      # Refresh the data from Metron (weekly and manual runs only). Ordinary pushes
+      # skip this and build with the data already committed to the repo, so a push
+      # never wipes the site's data and never depends on Metron being reachable.
+      # METRON_TOKEN is a repository secret (Settings > Secrets and variables >
+      # Actions); it only exists inside these steps and never reaches the built site.
+      # On the weekly run a failure stops the deploy, so the last good site stays up.
+      # On a manual run a failure is tolerated and the site deploys with committed data.
       - name: Sync catalog
         if: github.event_name != 'push'
         run: npm run sync:catalog
@@ -65,30 +69,30 @@ jobs:
           METRON_TOKEN: ${{ secrets.METRON_TOKEN }}
         continue-on-error: ${{ github.event_name != 'schedule' }}
 
-      - run: npm run check:data
-
-      - name: Save catalog changes
-        if: github.event_name != 'push'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/catalog/synced.json
-          if git diff --cached --quiet; then
-            echo "No catalog changes to save."
-          else
-            git commit -m "Weekly catalog sync"
-            git push
-          fi
-
-      # Fetch this week's releases from Metron. METRON_TOKEN is a repository secret
-      # (Settings > Secrets and variables > Actions); it never reaches the built site.
-      # On the weekly run a failure stops the deploy, so the last good site stays up.
-      # On ordinary pushes the site still deploys, just without fresh release data.
       - name: Sync releases
+        if: github.event_name != 'push'
         run: npm run sync:releases
         env:
           METRON_TOKEN: ${{ secrets.METRON_TOKEN }}
         continue-on-error: ${{ github.event_name != 'schedule' }}
+
+      - run: npm run check:data
+
+      # Commit whatever was refreshed back to main, even if a later step failed, so
+      # progress (like covers already looked up) is never lost.
+      - name: Save refreshed data
+        if: ${{ !cancelled() && github.event_name != 'push' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/catalog/synced.json
+          if [ -f public/data/releases.json ]; then git add public/data/releases.json; fi
+          if git diff --cached --quiet; then
+            echo "No data changes to save."
+          else
+            git commit -m "Weekly data sync"
+            git push
+          fi
 
       - run: npm run build
 
