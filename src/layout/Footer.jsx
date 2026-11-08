@@ -38,7 +38,7 @@ export default function Footer() {
             {providerInfo.coverAttribution}
           </p>
           <p>
-            New release data from{' '}
+            New release and extra catalog data from{' '}
             <a href="https://metron.cloud" target="_blank" rel="noreferrer">
               Metron
             </a>

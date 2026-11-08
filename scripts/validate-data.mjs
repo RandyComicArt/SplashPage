@@ -4,6 +4,7 @@
 // It catches the mistakes that are easy to make when editing data by hand:
 // a guide pointing at a comic id that doesn't exist, a typo in a path, and so on.
 
+import { readFileSync } from 'node:fs'
 import { comics } from '../src/data/catalog/comics.js'
 import { series } from '../src/data/catalog/series.js'
 import { guides, guideLevels, entryLabels } from '../src/data/guides/index.js'
@@ -41,6 +42,17 @@ for (const entry of series) {
   if (!comics.some((comic) => comic.seriesId === entry.id)) {
     problem(`series "${entry.id}": has no comics (it will be hidden in Discover)`)
   }
+}
+
+// ---- Synced catalog (written by `npm run sync:catalog`, may be empty)
+const syncedEntries = JSON.parse(readFileSync(new URL('../src/data/catalog/synced.json', import.meta.url), 'utf8')).entries
+checkUnique(syncedEntries, 'synced catalog', (entry) => entry.id)
+for (const entry of syncedEntries) {
+  const where = `synced entry "${entry.id}"`
+  if (!entry.title) problem(`${where}: missing title`)
+  if (!/^https:\/\//.test(entry.image ?? '')) problem(`${where}: image must be an https URL`)
+  if (comicIds.has(entry.id)) problem(`${where}: clashes with a hand-written comic id`)
+  if (!Array.isArray(entry.characters)) problem(`${where}: characters must be a list`)
 }
 
 // ---- Guides
@@ -91,4 +103,6 @@ if (problems.length) {
   process.exit(1)
 }
 
-console.log(`Data OK: ${comics.length} comics, ${series.length} series, ${guides.length} guides.`)
+console.log(
+  `Data OK: ${comics.length} comics, ${series.length} series, ${guides.length} guides, ${syncedEntries.length} synced catalog entries.`,
+)

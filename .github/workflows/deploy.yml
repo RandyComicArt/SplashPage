@@ -39,6 +39,10 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    # The very first catalog sync makes about 1,500 slow, rate-limited requests.
+    timeout-minutes: 180
+    permissions:
+      contents: write # lets the weekly run commit the refreshed catalog
     steps:
       - uses: actions/checkout@v4
 
@@ -49,7 +53,32 @@ jobs:
 
       - run: npm ci
       - run: npm run lint
+
+      # Refresh the Discover catalog (weekly and manual runs only; ordinary pushes
+      # just use the catalog file already in the repo). The result is committed back
+      # to main, so the next sync only has to look up covers for new series.
+      # As with releases, a failure stops the weekly deploy but not a manual one.
+      - name: Sync catalog
+        if: github.event_name != 'push'
+        run: npm run sync:catalog
+        env:
+          METRON_TOKEN: ${{ secrets.METRON_TOKEN }}
+        continue-on-error: ${{ github.event_name != 'schedule' }}
+
       - run: npm run check:data
+
+      - name: Save catalog changes
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/catalog/synced.json
+          if git diff --cached --quiet; then
+            echo "No catalog changes to save."
+          else
+            git commit -m "Weekly catalog sync"
+            git push
+          fi
 
       # Fetch this week's releases from Metron. METRON_TOKEN is a repository secret
       # (Settings > Secrets and variables > Actions); it never reaches the built site.

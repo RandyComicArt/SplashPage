@@ -203,7 +203,7 @@ export default function Home() {
               <SectionHeader id="browse-heading" eyebrow="Browse" title="Publishers and Genres" />
               <div className="browse">
                 <ul className="browse__publishers">
-                  {data.facets.publishers.map((publisher) => (
+                  {data.facets.publishers.slice(0, 4).map((publisher) => (
                     <li key={publisher.name}>
                       <Link
                         to={`/discover?publisher=${encodeURIComponent(publisher.name)}`}

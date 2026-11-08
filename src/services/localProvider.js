@@ -8,7 +8,7 @@
 //
 // Normalized comic shape returned by every function:
 //   {
-//     id, title, series: { id, title } | null, collects?, publisher,
+//     id, title, series: { id, title } | null, collects?, publisher?,
 //     year?, releaseDate?, description?,
 //     writers: string[], artists: string[], characters: string[], genres: string[],
 //     coverUrl?, coverThumbUrl?, mature?, beginnerFriendly?, featured?
@@ -17,14 +17,22 @@
 
 import { comics as rawComics } from '../data/catalog/comics.js'
 import { series as rawSeries } from '../data/catalog/series.js'
+// Collected editions synced weekly from Metron by `npm run sync:catalog`.
+// Empty until the first sync has run.
+import synced from '../data/catalog/synced.json'
+
+const hasSynced = synced.entries.length > 0
 
 export const providerInfo = {
   id: 'local-catalog',
-  name: 'Local starter catalog',
+  name: hasSynced ? 'Starter catalog plus Metron' : 'Local starter catalog',
   isLive: false,
-  summary:
-    'A small hand-checked catalog of well-known collected editions. It is not a live feed and does not track new releases.',
-  coverAttribution: 'Cover images courtesy of Open Library.',
+  summary: hasSynced
+    ? 'A hand-checked starter set of well-known collected editions, plus more collected editions synced weekly from Metron. It is not a live feed, and the synced entries have fewer details (no descriptions, creators or genres).'
+    : 'A small hand-checked catalog of well-known collected editions. It is not a live feed and does not track new releases.',
+  coverAttribution: hasSynced
+    ? 'Cover images courtesy of Open Library and Metron.'
+    : 'Cover images courtesy of Open Library.',
 }
 
 // ---------------------------------------------------------------- building
@@ -57,7 +65,34 @@ function toComic(raw) {
   }
 }
 
-const allComics = rawComics.map(toComic)
+// A synced entry knows far less than a hand-written one: a title, year, publisher,
+// the character it was found under, and a cover. Everything else is left empty.
+function toSyncedComic(entry) {
+  return {
+    id: entry.id,
+    title: entry.title,
+    series: null,
+    publisher: entry.publisher,
+    year: entry.year,
+    writers: [],
+    artists: [],
+    characters: entry.characters ?? [],
+    genres: [],
+    coverUrl: entry.image,
+    coverThumbUrl: entry.image,
+  }
+}
+
+const curatedComics = rawComics.map(toComic)
+
+// Hand-written entries win. A synced entry with the same title is skipped so
+// the same book doesn't appear twice in Discover.
+const curatedTitles = new Set(curatedComics.map((comic) => normalize(comic.title)))
+const syncedComics = synced.entries
+  .filter((entry) => !curatedTitles.has(normalize(entry.title)))
+  .map(toSyncedComic)
+
+const allComics = [...curatedComics, ...syncedComics]
 const comicsById = new Map(allComics.map((c) => [c.id, c]))
 
 const decadeOf = (year) => (year ? `${Math.floor(year / 10) * 10}s` : null)
@@ -261,7 +296,7 @@ export async function getFacets() {
 
   return {
     characters: toList(countBy(allComics.flatMap((c) => c.characters))),
-    publishers: toList(countBy(allComics.map((c) => c.publisher))),
+    publishers: toList(countBy(allComics.map((c) => c.publisher).filter(Boolean))),
     genres: toList(countBy(allComics.flatMap((c) => c.genres))),
     decades: [...countBy(allComics.map((c) => decadeOf(c.year)).filter(Boolean))]
       .map(([name, count]) => ({ name, count }))

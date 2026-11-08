@@ -49,12 +49,31 @@ METRON_TOKEN=your-token npm run sync:releases
 npm run dev
 ```
 
-### Comics catalog: local starter dataset, not a live feed
+### Comics catalog: hand-written starter set plus collected editions from Metron
 
-The app says so wherever it matters (for example a note on Discover).
+Discover searches two things together:
 
-- `src/data/catalog/`: 39 well-known collected editions and 37 series, written by hand. Optional fields (creators, "collects" ranges) are included only when known.
-- Cover images are loaded from [Open Library](https://openlibrary.org/dev/docs/api/covers) (`covers.openlibrary.org`). They are hotlinked, not stored in this repo. Open Library is a public service, so covers may occasionally be slow or missing. The UI falls back to a placeholder.
+1. **The starter catalog** (`src/data/catalog/comics.js`): hand-checked collected editions with descriptions, creators, genres and beginner-friendly flags. The Beginner Guides link to these.
+2. **Synced collected editions** (`src/data/catalog/synced.json`): trade paperbacks, hardcovers and graphic novels from Metron for the characters and teams listed in `scripts/sync-catalog.mjs`. This file is generated and committed to the repo.
+
+Synced entries only have what Metron's list endpoints give cheaply: title, year, publisher, the character or team they were found under, and a cover. They have **no descriptions, creators or genres**, so those filters only match starter-catalog entries. The comic page says "No description is available" rather than making anything up. If a synced entry has the same title as a starter entry, the starter entry wins and the synced one is skipped.
+
+`npm run sync:catalog`:
+
+- lists the series for each character or team (about 100 per request) and then looks up one cover per series. Covers already in `synced.json` are reused, so after the first run only new series cost requests.
+- needs `METRON_TOKEN`, spaces out requests, and caps cover lookups per run (1,500 by default; change with `--max-covers=N`). If it hits the cap, the rest are picked up next run.
+- has a `--dry-run` mode that prints what it found (series types, counts per source, sample titles, publishers) without fetching covers or writing anything. Run that first after changing the sources.
+- skips a character or team it can't find by its slug, and tells you.
+
+To add more characters or teams, add a line to `SOURCES` at the top of `scripts/sync-catalog.mjs`. Use the name the site uses (so filters match) and Metron's slug (the last part of `https://metron.cloud/character/<slug>/`).
+
+The weekly workflow runs this sync and commits the updated `synced.json` back to `main`, so the catalog stays current without anyone touching the repo. Ordinary pushes just use the file that's already committed.
+
+The app says wherever it matters that the catalog is not a live feed (for example a note on Discover).
+
+The starter set is 39 well-known collected editions and 37 series, written by hand. Optional fields (creators, "collects" ranges) are included only when known.
+
+Covers are hotlinked, not stored in this repo: starter entries use [Open Library](https://openlibrary.org/dev/docs/api/covers) (`covers.openlibrary.org`), synced entries and releases use Metron's image host. Both are public services, so covers may occasionally be slow or missing, and the UI falls back to a placeholder. Metron's cover images are full size, so Discover loads larger images than it strictly needs.
 
 ### Why a sync script instead of calling an API from the browser?
 
@@ -91,6 +110,7 @@ npm run preview      # serve the production build locally
 npm run lint         # oxlint
 npm run check:data   # validate catalog and guide data (see below)
 npm run sync:releases  # fetch new releases from Metron (needs METRON_TOKEN)
+npm run sync:catalog   # grow the Discover catalog from Metron (needs METRON_TOKEN; try --dry-run first)
 ```
 
 ## Project structure
@@ -110,6 +130,8 @@ src/
 scripts/
   validate-data.mjs     checks catalog and guide data
   sync-releases.mjs     fetches new releases from Metron
+  sync-catalog.mjs      fetches collected editions from Metron
+  lib/metron.mjs        shared, rate-limited Metron client
 ```
 
 ## Adding a Beginner Guide
@@ -123,10 +145,10 @@ Guides are plain JavaScript objects, so no code changes are needed.
 
 ## Deploying to GitHub Pages
 
-The site is published by `.github/workflows/deploy.yml`, which lints, validates the data, syncs releases, builds, and deploys `dist/`. It runs:
+The site is published by `.github/workflows/deploy.yml`, which lints, syncs the catalog (weekly and manual runs), validates the data, syncs releases, builds, and deploys `dist/`. It runs:
 
 - on every push to `main`
-- every **Wednesday at 15:00 UTC** (8am Pacific), which refreshes the release data with no action from you
+- every **Wednesday at 15:00 UTC** (8am Pacific), which refreshes the release data and the catalog with no action from you (the catalog update is committed back to `main` as "Weekly catalog sync")
 - on demand from the Actions tab
 
 In the repository settings, **Pages → Source** must be set to **GitHub Actions**, and a **`METRON_TOKEN`** secret must exist (Settings → Secrets and variables → Actions). The live site is at https://randycomicart.github.io/SplashPage/.
@@ -150,7 +172,7 @@ Working and usable, with a deliberately small catalog. Five Beginner Guides are 
 
 Not built yet. These are ideas, not promises.
 
-- A larger catalog synced from Metron (series and collected editions, fetched incrementally to respect rate limits)
+- Descriptions, creators and genres for synced catalog entries (needs more API requests per series)
 - Release detail pages
 - More guides
 - Guides for creators and genres, not only characters

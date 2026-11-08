@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "oxlint",
     "check:data": "node scripts/validate-data.mjs",
-    "sync:releases": "node scripts/sync-releases.mjs"
+    "sync:releases": "node scripts/sync-releases.mjs",
+    "sync:catalog": "node scripts/sync-catalog.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

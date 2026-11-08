@@ -3,17 +3,13 @@
 //
 //   METRON_TOKEN=... npm run sync:releases
 //
-// The token is read from the environment only. It is never written to a file
-// and never reaches the browser: the site only ever sees the JSON output.
-//
 // Metron data is licensed CC BY-SA 4.0 (https://metron.cloud). The site credits
-// it wherever the data is shown. Metron's API allows 20 requests per minute and
-// 5,000 per day, so this script spaces its requests out and honors Retry-After.
+// it wherever the data is shown. Request pacing and the token live in lib/metron.mjs.
 
 import { mkdir, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
+import { getAllPages, requireToken } from './lib/metron.mjs'
 
-const API = 'https://metron.cloud/api/issue/'
 const OUTPUT = fileURLToPath(new URL('../public/data/releases.json', import.meta.url))
 
 // How far back and forward to look, in days.
@@ -33,49 +29,8 @@ const PUBLISHERS = [
 ]
 
 const MAX_PAGES_PER_PUBLISHER = 10
-const MIN_MS_BETWEEN_REQUESTS = 3200 // stays under 20 requests a minute
-const MAX_RETRIES = 3
 
-const token = process.env.METRON_TOKEN
-if (!token) {
-  console.error('METRON_TOKEN is not set. Create a token on your Metron account page and export it first.')
-  process.exit(1)
-}
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-
-let lastRequestAt = 0
-
-async function getJson(url) {
-  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const wait = lastRequestAt + MIN_MS_BETWEEN_REQUESTS - Date.now()
-    if (wait > 0) await sleep(wait)
-    lastRequestAt = Date.now()
-
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        Accept: 'application/json',
-        'User-Agent': 'SplashPage release sync (https://github.com/RandyComicArt/SplashPage)',
-      },
-    })
-
-    if (response.status === 429) {
-      const seconds = Number(response.headers.get('Retry-After')) || 60
-      console.warn(`Rate limited by Metron. Waiting ${seconds}s (attempt ${attempt}/${MAX_RETRIES}).`)
-      await sleep(seconds * 1000)
-      continue
-    }
-
-    if (!response.ok) {
-      // Report the status only. The response body is not needed and could echo request details.
-      throw new Error(`Metron answered ${response.status} ${response.statusText} for ${new URL(url).pathname}`)
-    }
-
-    return response.json()
-  }
-  throw new Error('Metron kept rate limiting this request. Try again later.')
-}
+requireToken()
 
 const isoDay = (date) => date.toISOString().slice(0, 10)
 
@@ -83,27 +38,6 @@ function addDays(date, days) {
   const copy = new Date(date)
   copy.setUTCDate(copy.getUTCDate() + days)
   return copy
-}
-
-async function fetchPublisher(publisher, from, to) {
-  const params = new URLSearchParams({
-    store_date_range_after: from,
-    store_date_range_before: to,
-    publisher_name: publisher.query,
-  })
-
-  const issues = []
-  let url = `${API}?${params}`
-  for (let page = 1; url && page <= MAX_PAGES_PER_PUBLISHER; page++) {
-    const body = await getJson(url)
-    if (!Array.isArray(body.results)) {
-      throw new Error('Unexpected response from Metron: no "results" list.')
-    }
-    issues.push(...body.results)
-    url = body.next
-  }
-  if (url) console.warn(`${publisher.label}: stopped after ${MAX_PAGES_PER_PUBLISHER} pages; more results exist.`)
-  return issues
 }
 
 // Keep only the fields the site uses, and drop anything Metron left empty.
@@ -131,7 +65,17 @@ async function main() {
 
   const byId = new Map()
   for (const publisher of PUBLISHERS) {
-    const issues = await fetchPublisher(publisher, from, to)
+    const { items: issues, truncated } = await getAllPages(
+      'issue',
+      {
+        store_date_range_after: from,
+        store_date_range_before: to,
+        publisher_name: publisher.query,
+      },
+      { maxPages: MAX_PAGES_PER_PUBLISHER },
+    )
+    if (truncated) console.warn(`${publisher.label}: stopped after ${MAX_PAGES_PER_PUBLISHER} pages; more results exist.`)
+
     let added = 0
     for (const issue of issues) {
       const release = toRelease(issue, publisher)
