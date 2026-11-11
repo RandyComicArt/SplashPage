@@ -5,10 +5,10 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "updatedAt": "2026-11-08T05:12:09.529Z",
+  "updatedAt": "2026-11-11T22:01:05.889Z",
   "range": {
-    "from": "2026-10-25",
-    "to": "2026-11-29"
+    "from": "2026-10-28",
+    "to": "2026-12-02"
   },
   "items": [
     {
@@ -1150,6 +1150,16 @@
       "storeDate": "2026-11-11",
       "coverDate": "2026-11-01",
       "image": "https://static.metron.cloud/media/issue/2026/09/26/db1f73e6ab75487a9333bb2764b3a788.jpg"
+    },
+    {
+      "id": 188841,
+      "title": "Deicidium GN (2026) #1",
+      "series": "Deicidium",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-11-11",
+      "coverDate": "2026-11-01",
+      "image": "https://static.metron.cloud/media/issue/2026/11/10/deicidium-returned-ogn-tp-vol-01-mr_99857ba4f4.jpg"
     },
     {
       "id": 185221,
@@ -2688,6 +2698,416 @@
       "storeDate": "2026-11-25",
       "coverDate": "2027-01-01",
       "image": "https://static.metron.cloud/media/issue/2026/10/30/6b0a9b1aba4e4f7cb9b936b1b8af8aaa.jpg"
+    },
+    {
+      "id": 188828,
+      "title": "Justice League Unlimited TPB (2025) #4",
+      "series": "Justice League Unlimited",
+      "number": "4",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-01",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/11/10/bb51161e8a27452a93ee7bcbc40faf25.jpg"
+    },
+    {
+      "id": 185858,
+      "title": "100 Bullets: The US of Anger (2026) #6",
+      "series": "100 Bullets: The US of Anger",
+      "number": "6",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/e1ddb33f87724588b30190754b509380.jpg"
+    },
+    {
+      "id": 185860,
+      "title": "Absolute Superman (2025) #26",
+      "series": "Absolute Superman",
+      "number": "26",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/c091dbcb5f644217bfdd310b51b6aba9.jpg"
+    },
+    {
+      "id": 185861,
+      "title": "Batgirl (2025) #26",
+      "series": "Batgirl",
+      "number": "26",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/b473340df71743dc8ad77e2d81cbc8d0.jpg"
+    },
+    {
+      "id": 185862,
+      "title": "Batman (2025) #16",
+      "series": "Batman",
+      "number": "16",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/b2eeb933cdfa4ff8bb87e3fb0ceb845b.jpg"
+    },
+    {
+      "id": 185869,
+      "title": "Creature Corps (2026) #1",
+      "series": "Creature Corps",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/25077a38f2964951a788de4362100c7e.jpg"
+    },
+    {
+      "id": 185880,
+      "title": "Doomquest (2026) #6",
+      "series": "Doomquest",
+      "number": "6",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/f74eada6e62a43a6a4d4c4327f71cf6b.jpg"
+    },
+    {
+      "id": 185870,
+      "title": "Dread the Halls 2026 (2026) #1",
+      "series": "Dread the Halls 2026",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/c13ba110aea741df9b7f2a2449850fc3.jpg"
+    },
+    {
+      "id": 155726,
+      "title": "Dungeons & Dragons: The Fallbacks (2025) #4",
+      "series": "Dungeons & Dragons: The Fallbacks",
+      "number": "4",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2025/09/29/dcd96196c80c4e4980f25f24bca8c068.jpg"
+    },
+    {
+      "id": 185911,
+      "title": "Dungeons & Dragons: Total Party Killers (2026) #4",
+      "series": "Dungeons & Dragons: Total Party Killers",
+      "number": "4",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/42c641985e904b07be5249b42c63e77a.jpg"
+    },
+    {
+      "id": 185897,
+      "title": "Event Horizon: Pandemonium (2026) #1",
+      "series": "Event Horizon: Pandemonium",
+      "number": "1",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/9077bf3a2d5f47dd924304878f4254e1.jpg"
+    },
+    {
+      "id": 185775,
+      "title": "Exquisite Corpses: Fox Mask Killer (2026) #3",
+      "series": "Exquisite Corpses: Fox Mask Killer",
+      "number": "3",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/03/1f710b2a36a84f32ad731e1fa44be5e7.jpg"
+    },
+    {
+      "id": 185863,
+      "title": "Gangs of Gotham (2027) #2",
+      "series": "Gangs of Gotham",
+      "number": "2",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/fb4f2e5f14234af3831e59c3a789a369.jpg"
+    },
+    {
+      "id": 185898,
+      "title": "Godzilla (Kai-Sei Era) (2025) #15",
+      "series": "Godzilla (Kai-Sei Era)",
+      "number": "15",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/c53beeb277d943768bab0acf85fdf66a.jpg"
+    },
+    {
+      "id": 185899,
+      "title": "Hello Kitty: Cinnamoroll (2026) #1",
+      "series": "Hello Kitty: Cinnamoroll",
+      "number": "1",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/adb78b4f5e6b45a092e403bb29525b91.jpg"
+    },
+    {
+      "id": 185881,
+      "title": "Infernal Hulk vs. Avengers (2027) #1",
+      "series": "Infernal Hulk vs. Avengers",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/10d64e73d69c45fabc6748dd69c26000.jpg"
+    },
+    {
+      "id": 185882,
+      "title": "Iron Man (2026) #12",
+      "series": "Iron Man",
+      "number": "12",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/b4de246c9cbb45109b52047c827cb57e.jpg"
+    },
+    {
+      "id": 185864,
+      "title": "Jonah Hex and the Shadow of Death (2026) #3",
+      "series": "Jonah Hex and the Shadow of Death",
+      "number": "3",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/99ba3f8d92ec416397a10063583bdbc1.jpg"
+    },
+    {
+      "id": 185912,
+      "title": "Lady Baltimore: The Constant Death of Dr. Rose (2026) #1",
+      "series": "Lady Baltimore: The Constant Death of Dr. Rose",
+      "number": "1",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/34a74bd0fdd141c3a4d6627a96b6e52b.jpg"
+    },
+    {
+      "id": 185913,
+      "title": "Magic: The Gathering: Untold Stories – Liliana (2026) #2",
+      "series": "Magic: The Gathering: Untold Stories – Liliana",
+      "number": "2",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/61d06775d44644a08b7fded972525981.jpg"
+    },
+    {
+      "id": 185883,
+      "title": "Maximum X-Men (2027) #1",
+      "series": "Maximum X-Men",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/b64b822187564c669bc18e52782e32c7.jpg"
+    },
+    {
+      "id": 185873,
+      "title": "Merciless (2026) #1",
+      "series": "Merciless",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/d9a1c64fb51845bf8c4fe083c6beee68.jpg"
+    },
+    {
+      "id": 185865,
+      "title": "Poison Ivy (2022) #50",
+      "series": "Poison Ivy",
+      "number": "50",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/poison-ivy-50.jpg"
+    },
+    {
+      "id": 185885,
+      "title": "Punisher Showdowns: Winter Soldier (2027) #1",
+      "series": "Punisher Showdowns: Winter Soldier",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/d7b5659e59d248d8b11369f5cbace135.jpg"
+    },
+    {
+      "id": 185900,
+      "title": "Star Trek: Zero Point (2026) #2",
+      "series": "Star Trek: Zero Point",
+      "number": "2",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/b7d03ddab9d648bdb68e1b3789fe8c93.jpg"
+    },
+    {
+      "id": 185886,
+      "title": "Star Wars: The Fall of Kylo Ren (2026) #5",
+      "series": "Star Wars: The Fall of Kylo Ren",
+      "number": "5",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/5a44da20807f41a982ffa96f19128509.jpg"
+    },
+    {
+      "id": 185875,
+      "title": "Startling Tales of Santa Claus 2026 Annual (2026) #1",
+      "series": "Startling Tales of Santa Claus 2026 Annual",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/4407968026584b04acb29b3dae061950.jpg"
+    },
+    {
+      "id": 185920,
+      "title": "Stuff of Nightmares: The Hoodie (2026) #1",
+      "series": "Stuff of Nightmares: The Hoodie",
+      "number": "1",
+      "publisher": "BOOM! Studios",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/6585c129fa7f4a3a8653de776ec67b0d.jpg"
+    },
+    {
+      "id": 183496,
+      "title": "Supergirl: Survive (2026) #5",
+      "series": "Supergirl: Survive",
+      "number": "5",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/30/774ce98f671d490f8c484b9b3145a578.jpg"
+    },
+    {
+      "id": 185866,
+      "title": "Superman: The Stranger (2026) #4",
+      "series": "Superman: The Stranger",
+      "number": "4",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/6e10a73c573441209c2c5498cdd6f9ca.jpg"
+    },
+    {
+      "id": 185921,
+      "title": "Swamp Thing Is Killing the Children (2026) #1",
+      "series": "Swamp Thing Is Killing the Children",
+      "number": "1",
+      "publisher": "BOOM! Studios",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/fd88702931dc445695e8dd1fa03fd862.jpg"
+    },
+    {
+      "id": 185876,
+      "title": "Tales of Wonder (2026) #4",
+      "series": "Tales of Wonder",
+      "number": "4",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/377cca9f0a054405abc0df95eab0a0f9.jpg"
+    },
+    {
+      "id": 185902,
+      "title": "Teenage Mutant Ninja Turtles: Journeys (2025) #16",
+      "series": "Teenage Mutant Ninja Turtles: Journeys",
+      "number": "16",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/37081b5cdf234960b2b634e1e4b52c60.jpg"
+    },
+    {
+      "id": 185877,
+      "title": "The Curse of Sherlee Johnson (2025) #9",
+      "series": "The Curse of Sherlee Johnson",
+      "number": "9",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/0df435616a664b16a1016beaa49c128f.jpg"
+    },
+    {
+      "id": 185878,
+      "title": "The Darkness 30th Anniversary Art Gallery (2026) #1",
+      "series": "The Darkness 30th Anniversary Art Gallery",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/13bb5d0ed501452d9c11d991ff758ade.jpg"
+    },
+    {
+      "id": 185867,
+      "title": "The Demon (2026) #3",
+      "series": "The Demon",
+      "number": "3",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/af03134502014c3491c8d95cb8b12e62.jpg"
+    },
+    {
+      "id": 185868,
+      "title": "The Joker's Christmas Carol (2027) #1",
+      "series": "The Joker's Christmas Carol",
+      "number": "1",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/48f1ce5b410c480c8256813dcbff9e5d.jpg"
+    },
+    {
+      "id": 185901,
+      "title": "The Twilight Zone (2025) #12",
+      "series": "The Twilight Zone",
+      "number": "12",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-02",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/e914c1e77672478e80c80f2d81301920.jpg"
+    },
+    {
+      "id": 185887,
+      "title": "Venom: P.O.V. (2027) #1",
+      "series": "Venom: P.O.V.",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/5ed89a7dcaf94b3aa5aa77bd78b395fd.jpg"
+    },
+    {
+      "id": 185888,
+      "title": "Wolverine (2024) #30",
+      "series": "Wolverine",
+      "number": "30",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/b0926d82b82c4b13bbca59cdcc39239e.jpg"
+    },
+    {
+      "id": 185889,
+      "title": "X-Men United (2026) #10",
+      "series": "X-Men United",
+      "number": "10",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-02",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/05/53505119bcb74f1bab864ce9240b0051.jpg"
     }
   ]
 }
