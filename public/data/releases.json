@@ -5,642 +5,12 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "updatedAt": "2026-11-11T22:01:05.889Z",
+  "updatedAt": "2026-11-18T22:30:26.923Z",
   "range": {
-    "from": "2026-10-28",
-    "to": "2026-12-02"
+    "from": "2026-11-04",
+    "to": "2026-12-09"
   },
   "items": [
-    {
-      "id": 182969,
-      "title": "Absolute Batman (2024) #25",
-      "series": "Absolute Batman",
-      "number": "25",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/44f6f8342e4a420199b722537179ab78.jpg"
-    },
-    {
-      "id": 182970,
-      "title": "Absolute Wonder Woman (2024) #25",
-      "series": "Absolute Wonder Woman",
-      "number": "25",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/cd3567b9db204121a759748875964612.jpg"
-    },
-    {
-      "id": 181863,
-      "title": "Alien vs. X-Men (2026) #2",
-      "series": "Alien vs. X-Men",
-      "number": "2",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/eeceecc9386a45e6a111042126e579b0.jpg"
-    },
-    {
-      "id": 174367,
-      "title": "Batman: Bad Seeds – Gotham General (2026) #1",
-      "series": "Batman: Bad Seeds – Gotham General",
-      "number": "1",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/batman-bad-seeds-gotham-general-1-fixed.jpg"
-    },
-    {
-      "id": 182973,
-      "title": "Batman: Bad Seeds – Sunrise (2026) #1",
-      "series": "Batman: Bad Seeds – Sunrise",
-      "number": "1",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/038d6f7e815540218f6fe594f8146455.jpg"
-    },
-    {
-      "id": 171612,
-      "title": "Beast of Borikén (2026) #3",
-      "series": "Beast of Borikén",
-      "number": "3",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/06/19/05b0144e00c043ac95a263b7d255d6c8.jpg"
-    },
-    {
-      "id": 183004,
-      "title": "Bishop (2026) #5",
-      "series": "Bishop",
-      "number": "5",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/35b1ad6c478e46bf88608eb84a399f50.jpg"
-    },
-    {
-      "id": 181797,
-      "title": "Black Panther / Namor: Doomed (2026) #2",
-      "series": "Black Panther / Namor: Doomed",
-      "number": "2",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/1712c231dc9b436ebd7dca79ccd092fa.jpg"
-    },
-    {
-      "id": 182975,
-      "title": "Black Tower: The Raven Conspiracy (2026) #3",
-      "series": "Black Tower: The Raven Conspiracy",
-      "number": "3",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/1225a56520524d65abba874dbe9a6409.jpg"
-    },
-    {
-      "id": 183005,
-      "title": "Captain America (2025) #16",
-      "series": "Captain America",
-      "number": "16",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/df382b6eacfd48579129926c0de991ed.jpg"
-    },
-    {
-      "id": 182992,
-      "title": "Crimes Against Nature (2026) #2",
-      "series": "Crimes Against Nature",
-      "number": "2",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/69527eec490d4f909e9c9165a3c113e4.jpg"
-    },
-    {
-      "id": 183006,
-      "title": "Daredevil (2026) #8",
-      "series": "Daredevil",
-      "number": "8",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/922997c26b7443fb9a1a4d82de86ab09.jpg"
-    },
-    {
-      "id": 182977,
-      "title": "DC All In Saga: Darkseid vs. the World (2026) #1",
-      "series": "DC All In Saga: Darkseid vs. the World",
-      "number": "1",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/bf38091571f941738dd09e73cb980b97.jpg"
-    },
-    {
-      "id": 183024,
-      "title": "Dungeons & Dragons: Ravenloft (2026) #2",
-      "series": "Dungeons & Dragons: Ravenloft",
-      "number": "2",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/34f9b19c81004574add87a33a9d19208.jpg"
-    },
-    {
-      "id": 183007,
-      "title": "Fantastic Four (2025) #18",
-      "series": "Fantastic Four",
-      "number": "18",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/44c6fbe858fe4d89aee24e2d8bb69272.jpg"
-    },
-    {
-      "id": 173219,
-      "title": "Feral (2024) #27",
-      "series": "Feral",
-      "number": "27",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/07/30/5e79d8460122425295533f2561a1d848.jpg"
-    },
-    {
-      "id": 182994,
-      "title": "Final Boss (2025) #11",
-      "series": "Final Boss",
-      "number": "11",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/9bef04b678624acc9c5396f70f52c24e.jpg"
-    },
-    {
-      "id": 182995,
-      "title": "Fireborn (2026) #5",
-      "series": "Fireborn",
-      "number": "5",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/b91cadec77964b1993d820dc81c78011.jpg"
-    },
-    {
-      "id": 183018,
-      "title": "Fixation (2026) #2",
-      "series": "Fixation",
-      "number": "2",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/58fdecbd1831477da62609f8c1308e78.jpg"
-    },
-    {
-      "id": 183008,
-      "title": "Gambit Gone (2026) #2",
-      "series": "Gambit Gone",
-      "number": "2",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/2679a594ee924c1889faaf82e6bd9cb6.jpg"
-    },
-    {
-      "id": 183009,
-      "title": "Godzilla Conquers the Multiverse (2026) #4",
-      "series": "Godzilla Conquers the Multiverse",
-      "number": "4",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/6c5bf3a576614b8c84215de7a4ea2b9c.jpg"
-    },
-    {
-      "id": 183019,
-      "title": "Godzilla: Revenge of the Deadzone (2026) #1",
-      "series": "Godzilla: Revenge of the Deadzone",
-      "number": "1",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/d4b92006397146d6962dcee76405d094.jpg"
-    },
-    {
-      "id": 182979,
-      "title": "Green Lantern (2023) #40",
-      "series": "Green Lantern",
-      "number": "40",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/e9729ff4f8c64715a1abe3427bc38009.jpg"
-    },
-    {
-      "id": 162977,
-      "title": "Groo: The Prophecy (2026) #3",
-      "series": "Groo: The Prophecy",
-      "number": "3",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/02/24/0c461c13b1bd47e1a8c857f9adb2543d.jpg"
-    },
-    {
-      "id": 182980,
-      "title": "Harley Quinn (2021) #67",
-      "series": "Harley Quinn",
-      "number": "67",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/5311decac30a45159df7c735f3659512.jpg"
-    },
-    {
-      "id": 183025,
-      "title": "He-Man and the Masters of the Universe: Genesis (2026) #3",
-      "series": "He-Man and the Masters of the Universe: Genesis",
-      "number": "3",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/40eb5ae1a7904e7c9673ab1783351b92.jpg"
-    },
-    {
-      "id": 183039,
-      "title": "Hello Darkness (2024) #26",
-      "series": "Hello Darkness",
-      "number": "26",
-      "publisher": "BOOM! Studios",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/a7b73382aed9473985b7702feaa14bf3.jpg"
-    },
-    {
-      "id": 173236,
-      "title": "Hello Kitty and Friends: Hello World! (2026) #3",
-      "series": "Hello Kitty and Friends: Hello World!",
-      "number": "3",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/07/30/8c5db3247c4a400b91d5ef1f4cecc0ae.jpg"
-    },
-    {
-      "id": 182982,
-      "title": "Justice League Unlimited (2025) #24",
-      "series": "Justice League Unlimited",
-      "number": "24",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/jlu-24-fixed.jpg"
-    },
-    {
-      "id": 182983,
-      "title": "Justice League: Dark Realm Special (2026) #1",
-      "series": "Justice League: Dark Realm Special",
-      "number": "1",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/560eec64c8db4289804d11a4d67e00fb.jpg"
-    },
-    {
-      "id": 182997,
-      "title": "Lost Fantasy (2025) #13",
-      "series": "Lost Fantasy",
-      "number": "13",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/15558a9a9fa042f18d0ff670898f7dc5.jpg"
-    },
-    {
-      "id": 183040,
-      "title": "Mighty Morphin Power Rangers (2026) #5",
-      "series": "Mighty Morphin Power Rangers",
-      "number": "5",
-      "publisher": "BOOM! Studios",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/49beeeeb084945b4a4339f9f179026b3.jpg"
-    },
-    {
-      "id": 183026,
-      "title": "Minor Threats: Welcome to Twilight – Villains and Vignettes (2026) #1",
-      "series": "Minor Threats: Welcome to Twilight – Villains and Vignettes",
-      "number": "1",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/5c0cd986b3de411b85bed5b8ae9b2cc9.jpg"
-    },
-    {
-      "id": 182998,
-      "title": "Monstress (2015) #65",
-      "series": "Monstress",
-      "number": "65",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/72257a448f4f4039a3c4ed0107ef180f.jpg"
-    },
-    {
-      "id": 182984,
-      "title": "Poison Ivy (2022) #49",
-      "series": "Poison Ivy",
-      "number": "49",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/301abe61654a4127b4a4d4df1807b992.jpg"
-    },
-    {
-      "id": 181359,
-      "title": "Predator vs. the Planet of the Apes (2026) #4",
-      "series": "Predator vs. the Planet of the Apes",
-      "number": "4",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/ed29c4ccd3be48b4b8040f080524ee98.jpg"
-    },
-    {
-      "id": 182697,
-      "title": "Punisher (2026) #9",
-      "series": "Punisher",
-      "number": "9",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/9ed2f0c0297c42db9bd391eca6c43a5c.jpg"
-    },
-    {
-      "id": 183010,
-      "title": "Punisher vs. Spider-Man (2026) #4",
-      "series": "Punisher vs. Spider-Man",
-      "number": "4",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/1cc459154ac74895907d6a60766aff9a.jpg"
-    },
-    {
-      "id": 183020,
-      "title": "Sonic the Hedgehog (2018) #91",
-      "series": "Sonic the Hedgehog",
-      "number": "91",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/606e05f4ec5942a1a0b046c3bf0dc8ab.jpg"
-    },
-    {
-      "id": 182999,
-      "title": "Spawn (1992) #380",
-      "series": "Spawn",
-      "number": "380",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/f4918cede57442a6ab47ed834ef3344b.jpg"
-    },
-    {
-      "id": 183011,
-      "title": "Spider-Man / Hulk: Fire and Brimstone (2026) #3",
-      "series": "Spider-Man / Hulk: Fire and Brimstone",
-      "number": "3",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/837ba6e7b32e41068f85000e5a202664.jpg"
-    },
-    {
-      "id": 183021,
-      "title": "Star Trek: Holo-ween II (2026) #4",
-      "series": "Star Trek: Holo-ween II",
-      "number": "4",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/492a128c53b54096a9d2cc0541f2feb1.jpg"
-    },
-    {
-      "id": 183012,
-      "title": "Star Wars: Rogue One – Darth Vader (2026) #1",
-      "series": "Star Wars: Rogue One – Darth Vader",
-      "number": "1",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/1b31379d757a4615a8ca70cb289e31c3.jpg"
-    },
-    {
-      "id": 183013,
-      "title": "Star Wars: The Book of Boba Fett (2026) #4",
-      "series": "Star Wars: The Book of Boba Fett",
-      "number": "4",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/cdbe8c47a0e6432dbd20c625756f9d13.jpg"
-    },
-    {
-      "id": 182985,
-      "title": "Superman (2023) #43",
-      "series": "Superman",
-      "number": "43",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/a88262f9196045a1a5c4758953603ee2.jpg"
-    },
-    {
-      "id": 182986,
-      "title": "Superman: Father of Tomorrow (2026) #6",
-      "series": "Superman: Father of Tomorrow",
-      "number": "6",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/5618cac88a3047abb633b6fe191a6eee.jpg"
-    },
-    {
-      "id": 182987,
-      "title": "Superman: The Wedding Album 30th – Anniversary Special (2026) #1",
-      "series": "Superman: The Wedding Album 30th – Anniversary Special",
-      "number": "1",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/058bd3676a7b46c8862929d92640cfbe.jpg"
-    },
-    {
-      "id": 183022,
-      "title": "Teenage Mutant Ninja Turtles: Shredder (2025) #13",
-      "series": "Teenage Mutant Ninja Turtles: Shredder",
-      "number": "13",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/2476fb803cb048e2a030a72e7977b443.jpg"
-    },
-    {
-      "id": 169292,
-      "title": "That Texas Blood: Hell Comes to Allison Ranch (2026) #2",
-      "series": "That Texas Blood: Hell Comes to Allison Ranch",
-      "number": "2",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/05/02/acef6d1c43d94bc29d96d883408a7a2e.jpg"
-    },
-    {
-      "id": 183003,
-      "title": "The Amazing Spider-Man (2025) #1002",
-      "series": "The Amazing Spider-Man",
-      "number": "1002",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/660b1005521b450ebcdc64c9bf570a79.jpg"
-    },
-    {
-      "id": 183014,
-      "title": "The Amazing Venom (2026) #2",
-      "series": "The Amazing Venom",
-      "number": "2",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/7e7f3d1c20d6470eaaedc04504540bad.jpg"
-    },
-    {
-      "id": 183027,
-      "title": "The Big Shakedown (2026) #2",
-      "series": "The Big Shakedown",
-      "number": "2",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/0d8c20c67c8146d7bf9adeebc25a9d2e.jpg"
-    },
-    {
-      "id": 172208,
-      "title": "The Darkness (2025) #8",
-      "series": "The Darkness",
-      "number": "8",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/07/05/c2865ca5626b49eca286d5517fe57cf0.jpg"
-    },
-    {
-      "id": 174471,
-      "title": "The Department of Truth (2020) #39",
-      "series": "The Department of Truth",
-      "number": "39",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/08/10/762fc91426584f38b0ab8c31977bc8f9.jpg"
-    },
-    {
-      "id": 182988,
-      "title": "The Flash (2023) #38",
-      "series": "The Flash",
-      "number": "38",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/3a1ecf0f68ed4d728e6d37fa6aa29c45.jpg"
-    },
-    {
-      "id": 183023,
-      "title": "The Rocketeer: Infiltrator (2026) #4",
-      "series": "The Rocketeer: Infiltrator",
-      "number": "4",
-      "publisher": "IDW Publishing",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/acf8ecea7389483d8a0fc0e3a2cbc321.jpg"
-    },
-    {
-      "id": 182063,
-      "title": "The Scorched (2022) #56",
-      "series": "The Scorched",
-      "number": "56",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/08/30/9a3569f20fab4f36b7617975fd233781.jpg"
-    },
-    {
-      "id": 164001,
-      "title": "The Umbrella Academy: Plan B (2025) #5",
-      "series": "The Umbrella Academy: Plan B",
-      "number": "5",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/03/27/be1b6d17a3b845b4b7ac4e8e7718b16a.jpg"
-    },
-    {
-      "id": 183015,
-      "title": "Thor (2025) #802",
-      "series": "Thor",
-      "number": "802",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/b76e4dfd65b742438c714d71a7c95517.jpg"
-    },
-    {
-      "id": 183016,
-      "title": "Tomb of Apocalypse (2026) #3",
-      "series": "Tomb of Apocalypse",
-      "number": "3",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/862ead99cf2d40398057a09d8d1c3b4e.jpg"
-    },
-    {
-      "id": 183002,
-      "title": "Witchblade: Samhain Special (2026) #1",
-      "series": "Witchblade: Samhain Special",
-      "number": "1",
-      "publisher": "Image Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-10-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/07/02d430c01c5b482ba8cca2bda183903a.jpg"
-    },
-    {
-      "id": 183017,
-      "title": "X-Men (2024) #40",
-      "series": "X-Men",
-      "number": "40",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/23/1b8eb180f6cc493b957e83e4236c33c5.jpg"
-    },
-    {
-      "id": 182990,
-      "title": "Zatanna (2026) #7",
-      "series": "Zatanna",
-      "number": "7",
-      "publisher": "DC Comics",
-      "storeDate": "2026-10-28",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/19/15b7e0aea2354ded9b512f6331e42e04.jpg"
-    },
     {
       "id": 181814,
       "title": "Absolute Catwoman (2026) #4",
@@ -1263,13 +633,13 @@
     },
     {
       "id": 183506,
-      "title": "I Saw Spawn: A Twisted Christmas Tale (2026) #1",
-      "series": "I Saw Spawn: A Twisted Christmas Tale",
+      "title": "I Saw Spawn (2026) #1",
+      "series": "I Saw Spawn",
       "number": "1",
       "publisher": "Image Comics",
       "storeDate": "2026-11-11",
       "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/10/8eef942e11f84dabb9cc1f4b24a0b458.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/i-saw-spawn-1-fixed.jpg"
     },
     {
       "id": 185205,
@@ -1578,7 +948,8 @@
       "number": "5",
       "publisher": "DC Comics",
       "storeDate": "2026-11-18",
-      "coverDate": "2027-01-01"
+      "coverDate": "2027-01-01",
+      "image": "https://static.metron.cloud/media/issue/2026/11/12/43761b05cf1c41089faf258e4a7f30ea.jpg"
     },
     {
       "id": 185539,
@@ -1628,7 +999,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/26/2a8385990bac45f6a9a76311db4d1a89.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/82c65cd5f0064e1abdb6b0de9bf12db6.jpg"
     },
     {
       "id": 185547,
@@ -1668,17 +1039,7 @@
       "publisher": "Image Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/2435e9273a6c4b2c8aae6ed3a6518bfe.jpg"
-    },
-    {
-      "id": 185523,
-      "title": "Concrete: Stars Over Sand (2026) #5",
-      "series": "Concrete: Stars Over Sand",
-      "number": "5",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/c9f0030cc50e424c85035ee846d8fac2.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/18/chainkata-1-fixed.jpg"
     },
     {
       "id": 185479,
@@ -1718,7 +1079,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/80229bad26634f3e940c78c331a4084d.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/78f2e59a80e24049bdffe6c75082d24a.jpg"
     },
     {
       "id": 185504,
@@ -1738,7 +1099,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/ec8ab8e72138491daad48d9a91a73020.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/ba38bd2e321648ea9ca9006a65310f0d.jpg"
     },
     {
       "id": 181867,
@@ -1748,7 +1109,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/08/29/69aba2ad4c614d2bbd412ba724e5b9ef.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/4eb9be309d984a2088e02d54a21bc0d4.jpg"
     },
     {
       "id": 185482,
@@ -1821,16 +1182,6 @@
       "image": "https://static.metron.cloud/media/issue/2026/09/28/afed75b1e6674f7ea8343d0ed254cdb0.jpg"
     },
     {
-      "id": 185526,
-      "title": "Kill All Immortals III (2026) #2",
-      "series": "Kill All Immortals III",
-      "number": "2",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/115220cda0cd4a7c879500a4b13e460a.jpg"
-    },
-    {
       "id": 185487,
       "title": "King Spawn (2021) #61",
       "series": "King Spawn",
@@ -1861,16 +1212,6 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/30/599c6021d3974db9923d4a34dc69ad6e.jpg"
     },
     {
-      "id": 174673,
-      "title": "Lucky Devils (2025) #10",
-      "series": "Lucky Devils",
-      "number": "10",
-      "publisher": "Image Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/25/lucky-devils-10.jpg"
-    },
-    {
       "id": 185512,
       "title": "Marc Spector: Moon Knight (2026) #10",
       "series": "Marc Spector: Moon Knight",
@@ -1878,7 +1219,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/feb00b8683364391886d7d0d8442c4f3.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/1770d20f77cf487382ea34f3fc6eb308.jpg"
     },
     {
       "id": 185513,
@@ -1899,6 +1240,16 @@
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
       "image": "https://static.metron.cloud/media/issue/2026/09/28/fef0da6b972d4f2c9fc00a4e699ae7fe.jpg"
+    },
+    {
+      "id": 188979,
+      "title": "Midnight X-Men (2026) #2",
+      "series": "Midnight X-Men",
+      "number": "2",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-11-18",
+      "coverDate": "2027-01-01",
+      "image": "https://static.metron.cloud/media/issue/2026/11/12/0a86adc0e2da4bad8194f87d67c37c85.jpg"
     },
     {
       "id": 185506,
@@ -1948,7 +1299,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/0a5b5da5295b44778085e964c7495b4a.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/daaa4fcbad364dc49bb98cdfeee26e6c.jpg"
     },
     {
       "id": 185516,
@@ -1958,26 +1309,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/0921c2188ab743939bc1aa8fa8067fcc.jpg"
-    },
-    {
-      "id": 185489,
-      "title": "Radiant Black (2021) #45",
-      "series": "Radiant Black",
-      "number": "45",
-      "publisher": "Image Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/4a6baee7190a4c0d919e6d93e6dfcfea.jpg"
-    },
-    {
-      "id": 182058,
-      "title": "Savage Dragon (1993) #283",
-      "series": "Savage Dragon",
-      "number": "283",
-      "publisher": "Image Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/98e4794d001b43c1bd5ef4748035aa46.jpg"
     },
     {
       "id": 185490,
@@ -2007,7 +1339,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/12b78a87d196438e96ee83083cc342e3.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/9dbbb1d1a5eb4657a1ff461ce333e4e7.jpg"
     },
     {
       "id": 185508,
@@ -2050,16 +1382,6 @@
       "image": "https://static.metron.cloud/media/issue/2026/09/28/e26d35f6da2f41c39af80e1af48cdbdd.jpg"
     },
     {
-      "id": 185493,
-      "title": "The Scorched (2022) #57",
-      "series": "The Scorched",
-      "number": "57",
-      "publisher": "Image Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/05be561fb2ab4d439f5b2af768abe3e2.jpg"
-    },
-    {
       "id": 185518,
       "title": "Tomb of Apocalypse (2026) #4",
       "series": "Tomb of Apocalypse",
@@ -2067,7 +1389,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/56383e4b32284fe6ac5bf98beec887f2.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/1a04d22bf59c411896341adbe0c40356.jpg"
     },
     {
       "id": 185519,
@@ -2077,7 +1399,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/171f13c140984b32996e6286267b01de.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/0bd6c72b0f0143f595ffac50a78f0ae1.jpg"
     },
     {
       "id": 162779,
@@ -2110,16 +1432,6 @@
       "image": "https://static.metron.cloud/media/issue/2026/09/26/e0adf158cec04ff3be9edbf8db04f103.jpg"
     },
     {
-      "id": 185528,
-      "title": "Witness Point (2026) #4",
-      "series": "Witness Point",
-      "number": "4",
-      "publisher": "Dark Horse Comics",
-      "storeDate": "2026-11-18",
-      "coverDate": "2026-11-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/1a6bf19003234bf6942121be07bbc1f7.jpg"
-    },
-    {
       "id": 185509,
       "title": "Wonder Woman (2023) #39",
       "series": "Wonder Woman",
@@ -2137,7 +1449,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/e84c6e05a54e4e8fb50603c1fa764200.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/f2f37cc49b36428fae44392f509cad2d.jpg"
     },
     {
       "id": 185521,
@@ -2147,7 +1459,7 @@
       "publisher": "Marvel Comics",
       "storeDate": "2026-11-18",
       "coverDate": "2027-01-01",
-      "image": "https://static.metron.cloud/media/issue/2026/09/28/815bcb88db544572963ad024c8d3d9fb.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/11/13/8d09fb8868154d82a03c0794bd60add1.jpg"
     },
     {
       "id": 185195,
@@ -2228,6 +1540,16 @@
       "storeDate": "2026-11-25",
       "coverDate": "2027-01-01",
       "image": "https://static.metron.cloud/media/issue/2026/10/30/94c5bb3cf9fb4fba81079d8d05e5d975.jpg"
+    },
+    {
+      "id": 185523,
+      "title": "Concrete: Stars Over Sand (2026) #5",
+      "series": "Concrete: Stars Over Sand",
+      "number": "5",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-11-25",
+      "coverDate": "2026-11-01",
+      "image": "https://static.metron.cloud/media/issue/2026/09/28/c9f0030cc50e424c85035ee846d8fac2.jpg"
     },
     {
       "id": 185773,
@@ -2398,6 +1720,16 @@
       "storeDate": "2026-11-25",
       "coverDate": "2027-01-01",
       "image": "https://static.metron.cloud/media/issue/2026/10/30/9d789e708e6b43f09523360e2af9f764.jpg"
+    },
+    {
+      "id": 185526,
+      "title": "Kill All Immortals III (2026) #2",
+      "series": "Kill All Immortals III",
+      "number": "2",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-11-25",
+      "coverDate": "2026-11-01",
+      "image": "https://static.metron.cloud/media/issue/2026/09/28/115220cda0cd4a7c879500a4b13e460a.jpg"
     },
     {
       "id": 184976,
@@ -2630,6 +1962,16 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/03/532f128138ea4bb5bf288cb018510f91.jpg"
     },
     {
+      "id": 185493,
+      "title": "The Scorched (2022) #57",
+      "series": "The Scorched",
+      "number": "57",
+      "publisher": "Image Comics",
+      "storeDate": "2026-11-25",
+      "coverDate": "2026-11-01",
+      "image": "https://static.metron.cloud/media/issue/2026/09/28/05be561fb2ab4d439f5b2af768abe3e2.jpg"
+    },
+    {
       "id": 185799,
       "title": "Thor (2025) #803",
       "series": "Thor",
@@ -2680,6 +2022,16 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/03/9c21256450c345dda5aacb6846cefbfe.jpg"
     },
     {
+      "id": 185528,
+      "title": "Witness Point (2026) #4",
+      "series": "Witness Point",
+      "number": "4",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-11-25",
+      "coverDate": "2026-11-01",
+      "image": "https://static.metron.cloud/media/issue/2026/09/28/1a6bf19003234bf6942121be07bbc1f7.jpg"
+    },
+    {
       "id": 185802,
       "title": "Wolverine: Paradise (2026) #2",
       "series": "Wolverine: Paradise",
@@ -2708,6 +2060,16 @@
       "storeDate": "2026-12-01",
       "coverDate": "2027-02-01",
       "image": "https://static.metron.cloud/media/issue/2026/11/10/bb51161e8a27452a93ee7bcbc40faf25.jpg"
+    },
+    {
+      "id": 182058,
+      "title": "Savage Dragon (1993) #283",
+      "series": "Savage Dragon",
+      "number": "283",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-01",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/11/12/savage-dragon-283.jpg"
     },
     {
       "id": 185858,
@@ -2810,16 +2172,6 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/05/9077bf3a2d5f47dd924304878f4254e1.jpg"
     },
     {
-      "id": 185775,
-      "title": "Exquisite Corpses: Fox Mask Killer (2026) #3",
-      "series": "Exquisite Corpses: Fox Mask Killer",
-      "number": "3",
-      "publisher": "Image Comics",
-      "storeDate": "2026-12-02",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/03/1f710b2a36a84f32ad731e1fa44be5e7.jpg"
-    },
-    {
       "id": 185863,
       "title": "Gangs of Gotham (2027) #2",
       "series": "Gangs of Gotham",
@@ -2890,14 +2242,14 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/05/34a74bd0fdd141c3a4d6627a96b6e52b.jpg"
     },
     {
-      "id": 185913,
-      "title": "Magic: The Gathering: Untold Stories – Liliana (2026) #2",
-      "series": "Magic: The Gathering: Untold Stories – Liliana",
-      "number": "2",
-      "publisher": "Dark Horse Comics",
+      "id": 174673,
+      "title": "Lucky Devils (2025) #10",
+      "series": "Lucky Devils",
+      "number": "10",
+      "publisher": "Image Comics",
       "storeDate": "2026-12-02",
       "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/05/61d06775d44644a08b7fded972525981.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/09/25/lucky-devils-10.jpg"
     },
     {
       "id": 185883,
@@ -3030,16 +2382,6 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/05/37081b5cdf234960b2b634e1e4b52c60.jpg"
     },
     {
-      "id": 185877,
-      "title": "The Curse of Sherlee Johnson (2025) #9",
-      "series": "The Curse of Sherlee Johnson",
-      "number": "9",
-      "publisher": "Image Comics",
-      "storeDate": "2026-12-02",
-      "coverDate": "2026-12-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/05/0df435616a664b16a1016beaa49c128f.jpg"
-    },
-    {
       "id": 185878,
       "title": "The Darkness 30th Anniversary Art Gallery (2026) #1",
       "series": "The Darkness 30th Anniversary Art Gallery",
@@ -3100,14 +2442,413 @@
       "image": "https://static.metron.cloud/media/issue/2026/10/05/b0926d82b82c4b13bbca59cdcc39239e.jpg"
     },
     {
-      "id": 185889,
-      "title": "X-Men United (2026) #10",
-      "series": "X-Men United",
-      "number": "10",
-      "publisher": "Marvel Comics",
-      "storeDate": "2026-12-02",
+      "id": 186500,
+      "title": "Action Comics (2016) #1105",
+      "series": "Action Comics",
+      "number": "1105",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
       "coverDate": "2027-02-01",
-      "image": "https://static.metron.cloud/media/issue/2026/10/05/53505119bcb74f1bab864ce9240b0051.jpg"
+      "image": "https://static.metron.cloud/media/issue/2026/10/16/b6361eab1113427b8922a2926fb995eb.jpg"
+    },
+    {
+      "id": 187666,
+      "title": "Barbara Gordon: Breakout (2026) #8",
+      "series": "Barbara Gordon: Breakout",
+      "number": "8",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/f421c7fe136a499399f5da935d6e6379.jpg"
+    },
+    {
+      "id": 187667,
+      "title": "Batman & Robin: Year One – Dynamic Duos (2026) #5",
+      "series": "Batman & Robin: Year One – Dynamic Duos",
+      "number": "5",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/892936ea8afb49c5977e1eee850e1c1f.jpg"
+    },
+    {
+      "id": 187654,
+      "title": "Black Cat (2025) #17",
+      "series": "Black Cat",
+      "number": "17",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/5331adcfa34549438dfe05ccf547b004.jpg"
+    },
+    {
+      "id": 187655,
+      "title": "Black Panther / Namor: Doomed (2026) #4",
+      "series": "Black Panther / Namor: Doomed",
+      "number": "4",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/4bd0e72558e14480b337e6b20e8582cc.jpg"
+    },
+    {
+      "id": 187656,
+      "title": "Captain America (2025) #18",
+      "series": "Captain America",
+      "number": "18",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/1f704852d93b4cd2bdf3c7f664515eea.jpg"
+    },
+    {
+      "id": 187668,
+      "title": "Clayface: Celebrity Dirt (2026) #6",
+      "series": "Clayface: Celebrity Dirt",
+      "number": "6",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/e04d25bd8d284a02980768f8f481fce2.jpg"
+    },
+    {
+      "id": 187705,
+      "title": "Cyberpunk 2077: Jayk's Case (2026) #2",
+      "series": "Cyberpunk 2077: Jayk's Case",
+      "number": "2",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/c43d7172ea3343f790d0aad6e42dc59c.jpg"
+    },
+    {
+      "id": 187669,
+      "title": "Emperor Aquaman (2026) #24",
+      "series": "Emperor Aquaman",
+      "number": "24",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/1cb06eb3ed034ec18b79f55730111210.jpg"
+    },
+    {
+      "id": 187682,
+      "title": "Exquisite Corpses: Lone Gunman (2026) #2",
+      "series": "Exquisite Corpses: Lone Gunman",
+      "number": "2",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/81e181ec40734854af5d2ca87e033557.jpg"
+    },
+    {
+      "id": 187493,
+      "title": "Fugitive X-Force (2027) #1",
+      "series": "Fugitive X-Force",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/21/68db3e97fb4f454891eeb7c4868c1186.jpg"
+    },
+    {
+      "id": 187657,
+      "title": "Gambit Gone (2026) #4",
+      "series": "Gambit Gone",
+      "number": "4",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/7c69b177da2e4440a53a4f70a383e1b0.jpg"
+    },
+    {
+      "id": 187670,
+      "title": "Green Lantern Corps (2025) #23",
+      "series": "Green Lantern Corps",
+      "number": "23",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01"
+    },
+    {
+      "id": 187671,
+      "title": "Hitman: It Was the Nineties Special (2027) #1",
+      "series": "Hitman: It Was the Nineties Special",
+      "number": "1",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/094b13f9d5ca4284af4428f8b6a10bd4.jpg"
+    },
+    {
+      "id": 187684,
+      "title": "I Saw Spawn (2026) #2",
+      "series": "I Saw Spawn",
+      "number": "2",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/83109a3dbd0c4b4ebf825ebf86c1dfd7.jpg"
+    },
+    {
+      "id": 187685,
+      "title": "In Good Hands With Bad Company (2026) #1",
+      "series": "In Good Hands With Bad Company",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/f8949af85fb34ec4a0b8937b764cd3ff.jpg"
+    },
+    {
+      "id": 174672,
+      "title": "Kaya (2022) #38",
+      "series": "Kaya",
+      "number": "38",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/19/0726IM0471.jpg"
+    },
+    {
+      "id": 187672,
+      "title": "Legion of Super-Heroes (2026) #4",
+      "series": "Legion of Super-Heroes",
+      "number": "4",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/785356dbf5564ab9893788cb868376ae.jpg"
+    },
+    {
+      "id": 187658,
+      "title": "Marvel Zombies: War Zone (2026) #4",
+      "series": "Marvel Zombies: War Zone",
+      "number": "4",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/cfc16a2d0d8741c99c74959d34de6a34.jpg"
+    },
+    {
+      "id": 187713,
+      "title": "No Gods, No Masters (2026) #4",
+      "series": "No Gods, No Masters",
+      "number": "4",
+      "publisher": "BOOM! Studios",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/25/f859415b1a2e4546977ecdd5116cc94b.jpg"
+    },
+    {
+      "id": 187659,
+      "title": "Punisher (2026) #11",
+      "series": "Punisher",
+      "number": "11",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/punisher-11.jpg"
+    },
+    {
+      "id": 187695,
+      "title": "Sonic the Hedgehog (2018) #92",
+      "series": "Sonic the Hedgehog",
+      "number": "92",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/41050780c7be43e1aa1a9e56b9892a8e.jpg"
+    },
+    {
+      "id": 187660,
+      "title": "Spider-Man: Incursions (2027) #1",
+      "series": "Spider-Man: Incursions",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/883d04730deb46a4bfb124532c0cca81.jpg"
+    },
+    {
+      "id": 187696,
+      "title": "Star Trek: Red Shirts –- Ghost of the 21st Century (2026) #5",
+      "series": "Star Trek: Red Shirts –- Ghost of the 21st Century",
+      "number": "5",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/st-ghost-century-5.jpg"
+    },
+    {
+      "id": 187661,
+      "title": "Star Wars: The Book of Boba Fett (2026) #7",
+      "series": "Star Wars: The Book of Boba Fett",
+      "number": "7",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/25977ec753e94eb091d280b1c948bda2.jpg"
+    },
+    {
+      "id": 187706,
+      "title": "Star-Crossed (2026) #4",
+      "series": "Star-Crossed",
+      "number": "4",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/f9449fb4df9e4d6484e96d2087de6b65.jpg"
+    },
+    {
+      "id": 187697,
+      "title": "Starship Godzilla: Invasion X (2026) #3",
+      "series": "Starship Godzilla: Invasion X",
+      "number": "3",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/e2f0ab1b3adf496e9778e1762243cef2.jpg"
+    },
+    {
+      "id": 187673,
+      "title": "Supergirl (2025) #20",
+      "series": "Supergirl",
+      "number": "20",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/6bb1f3e048484c3dac7a9fe4e596caea.jpg"
+    },
+    {
+      "id": 187674,
+      "title": "Teen Titans (2026) #4",
+      "series": "Teen Titans",
+      "number": "4",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/8fa1ea1fe2e84023a44032c124bd4637.jpg"
+    },
+    {
+      "id": 187698,
+      "title": "Teenage Mutant Ninja Turtles: Holiday Special (2026) #1",
+      "series": "Teenage Mutant Ninja Turtles: Holiday Special",
+      "number": "1",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/5b8d96c14b1b429b84bcf603412dd24f.jpg"
+    },
+    {
+      "id": 187662,
+      "title": "The Amazing Spider-Man (2025) #1005",
+      "series": "The Amazing Spider-Man",
+      "number": "1005",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/4b187ebc5c6148e6b12a821b21074b0c.jpg"
+    },
+    {
+      "id": 187675,
+      "title": "The Doom Patrol (2026) #4",
+      "series": "The Doom Patrol",
+      "number": "4",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/c8aa5bf49a1641a081f377f4bca99c87.jpg"
+    },
+    {
+      "id": 187676,
+      "title": "The Fury of Firestorm (2026) #9",
+      "series": "The Fury of Firestorm",
+      "number": "9",
+      "publisher": "DC Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/ce166968657a43ceaadd307b53da0d0f.jpg"
+    },
+    {
+      "id": 187707,
+      "title": "The Ones II: The Other Ones (2026) #1",
+      "series": "The Ones II: The Other Ones",
+      "number": "1",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/0097297bce1d4618917ba8efb2cd21bf.jpg"
+    },
+    {
+      "id": 187686,
+      "title": "The Power Fantasy (2024) #17",
+      "series": "The Power Fantasy",
+      "number": "17",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/c37c45c26ce04998afcd49eb9280d121.jpg"
+    },
+    {
+      "id": 187687,
+      "title": "The Princess Murders (2026) #1",
+      "series": "The Princess Murders",
+      "number": "1",
+      "publisher": "Image Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/25f5cd6496014c4bb97d0136c8de9eb5.jpg"
+    },
+    {
+      "id": 187708,
+      "title": "Three Worlds / Three Moons: Arrivals (2026) #2",
+      "series": "Three Worlds / Three Moons: Arrivals",
+      "number": "2",
+      "publisher": "Dark Horse Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/f3c8725b9a394f20bd8fd70eff8e17fb.jpg"
+    },
+    {
+      "id": 187663,
+      "title": "Wade Wilson: Deadpool (2026) #11",
+      "series": "Wade Wilson: Deadpool",
+      "number": "11",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/fa7997abc0d5494ba78fd55669063c19.jpg"
+    },
+    {
+      "id": 187664,
+      "title": "X-Men (2024) #42",
+      "series": "X-Men",
+      "number": "42",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/xmen-42.jpg"
+    },
+    {
+      "id": 187699,
+      "title": "You'll Never Leave This Place Alive (2026) #2",
+      "series": "You'll Never Leave This Place Alive",
+      "number": "2",
+      "publisher": "IDW Publishing",
+      "storeDate": "2026-12-09",
+      "coverDate": "2026-12-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/8a100d14dfba4820802082a469f3b701.jpg"
+    },
+    {
+      "id": 187665,
+      "title": "Your Friendly Neighborhood Spider-Man (2027) #1",
+      "series": "Your Friendly Neighborhood Spider-Man",
+      "number": "1",
+      "publisher": "Marvel Comics",
+      "storeDate": "2026-12-09",
+      "coverDate": "2027-02-01",
+      "image": "https://static.metron.cloud/media/issue/2026/10/24/851770e79a9c4a709c6ae7efb0034fa1.jpg"
     }
   ]
 }
